@@ -1,4 +1,4 @@
-# Challenge lesson_01
+# Challenge lesson_02
 
 # 1. Calcul d'un prix
 
