@@ -30,4 +30,6 @@ age_flottant = float(age_int)
 print(age_flottant)
 
 nom = input("Quel est ton nom ?\n")
-print("Bonjour, " + nom + " !")
+age = input("Quel est votre age ?\n")
+print("Bonjour, " + nom + " ! Putain ! La vache !! Vous avez déjà " + age + " ans!!!")
+
