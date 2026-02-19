@@ -144,3 +144,77 @@ separator = ", "
 starches_list = starches.split(separator)
 print(starches_list)
 print()
+
+# mutable
+
+# Les listes sont des objets mutables, ce qui signifie que vous pouvez modifier leur contenu après les avoir créées.
+# Par exemple, vous pouvez ajouter, supprimer ou modifier des éléments d'une liste existante.
+# L'id de la liste reste le même, même si son contenu change.
+
+condiments = ["sel", "poivre", "paprika", "cumin", "curcuma", "cannelle", "gingembre", "ail en poudre", "oignon en poudre", "piment de cayenne"]
+print(condiments)
+print(id(condiments))
+print()
+
+condiments[0] = "sel de mer"
+print(condiments)
+print(id(condiments))
+print()
+
+condiments.append("herbes de Provence")
+print(condiments)
+print(id(condiments))
+
+# list of lists
+
+# Une liste de listes est une liste qui contient d'autres listes comme éléments.
+# Par exemple, une liste de sauces peut être une liste qui contient trois listes de sauces différentes : sauces_01, sauces_02 et sauces_03.
+
+sauces_01 = ["bolognese", "carbonara", "alfredo", "pesto", "marinara", "arrabbiata", "puttanesca", "amatriciana", "napolitaine", "primavera"]
+sauces_02 = ["béchamel", "hollandaise", "velouté", "espagnole", "soubise", "mornay", "sauce gribiche", "sauce ravigote", "sauce grise", "sauce blanche"]
+sauces_03 = ["sauce barbecue", "sauce teriyaki", "sauce soja", "sauce hoisin", "sauce sriracha", "sauce chili", "sauce aigre-douce", "sauce satay", "sauce yakitori", "sauce ponzu"]
+
+sauces = [sauces_01, sauces_02, sauces_03]
+print(sauces)
+print()
+print(sauces[0])
+print()
+print(sauces[1])
+print()
+print(sauces[2])
+print()
+print(sauces[0][0])
+print()
+print(sauces[1][0])
+print()
+print(sauces[2][0])
+print()
+
+# iterate a list
+
+# Pour itérer sur une liste, on peut utiliser une boucle for.
+# Par exemple, pour afficher les éléments de la liste hot_drinks, on peut faire :
+
+hot_drinks = ["café", "thé", "chocolat chaud", "lait chaud", "tisane", "matcha latte", "chai latte", "cappuccino", "latte macchiato", "americano"]
+for drink in hot_drinks:
+  print(drink)
+
+print()
+
+# Pour itérer, on peut également utiliser une boucle while avec un index pour accéder aux éléments de la liste.
+index = 0
+while index < len(hot_drinks):
+  print(hot_drinks[index])
+  index += 1
+
+# reverse a list
+
+# Pour inverser une liste, on peut utiliser la fonction reversed() ou la méthode reverse().
+# La fonction reversed() renvoie un itérateur qui parcourt la liste à l'envers, tandis que la méthode reverse() modifie la liste en place.
+
+hot_drinks_reversed = list(reversed(hot_drinks))
+print(hot_drinks_reversed)
+print()
+
+hot_drinks.reverse()
+print(hot_drinks) 
