@@ -1,4 +1,4 @@
-# Challenge lesson_07
+# Challenge_02 lesson_07
 
 # Preliminary note: sometimes, the challenge tells you to do something that is incompatible with some input (for instance, you ask for a position but the user enters some text, or an invalid number).
 # Here you can assume that all user input goes according to plan (the "happy path"). 
