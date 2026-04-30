@@ -81,3 +81,39 @@ print(my_tuple6)
 
 my_tuple7 = my_tuple3[::2]  # Slicing with step of 2
 print(my_tuple7)
+
+# input
+
+name = input("What is your name? ")
+print(f"Hello, {name}!")
+
+age = int(input("What is your age? "))
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a child.")
+
+user_information = {
+    "name": input("What is your name? "),
+    "age": int(input("What is your age? "))
+}
+print(user_information)
+
+number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print("The number is even.")
+else:    print("The number is odd.")
+
+# add another information to the dictionary
+
+user_information["city"] = input("What city do you live in? ")
+print(user_information)
+
+# ask the user to enter a position and a new series name, then create a new tuple with the new series name at the specified position
+
+my_tuple_series = ('K2000', 'Hooker', 'Wonder Woman', 'Sherif fais-moi peur', 'MacGyver', 'X-Files', 'Buffy contre les vampires', 'Charmed', 'Smallville', 'Supernatural')
+position = int(input("Enter a position (0-9): "))
+if 0 <= position < len(my_tuple_series):
+    new_tuple_series = my_tuple_series[:position] + (input("Enter a new series name: "),) + my_tuple_series[position:]
+    print(new_tuple_series)
+else:    print("Invalid position. Please enter a number between 0 and 9.")
