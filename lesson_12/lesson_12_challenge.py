@@ -48,3 +48,26 @@ def first_10_multiples(nb):
 
 print(first_10_multiples(5)) # This will return [5, 10, 15, 20, 25, 30, 35, 40, 45, 50], because those are the first 10 multiples of 5.
 print(first_10_multiples(3)) # This will return [3, 6, 9, 12, 15, 18, 21, 24, 27, 30], because those are the first 10 multiples of 3.
+
+# Mission 4 : Create a function that takes a string as input, and return its vowels only, preserving case.
+# Example: "Antidisestablishmentarianism" will return "Aieaeiaia"
+# Example: "TO BE OR NOT TO BE" will return "OOOOTOEE"
+
+def return_vowels(string):
+  vowels = "aeiouyAEIOUY"
+  vowels_filter = []
+  for letters in string:
+    if letters in vowels:
+      vowels_filter.append(letters)
+
+  return "".join(vowels_filter)
+
+print(return_vowels("LUDOVIC"))
+
+# Other way to do it:
+
+def return_vowels(string):
+  vowels = "aeiouyAEIOUY"
+  return "".join(letter for letter in string if letter in vowels)
+
+print(return_vowels("HONOLULU"))
