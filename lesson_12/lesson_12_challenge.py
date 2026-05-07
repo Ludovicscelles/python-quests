@@ -128,3 +128,24 @@ print(my_operation_2(21, 0, 3)) # This will try to compute (21 / 0) - 3, will di
 print(my_operation_2(5, 5, 25)) # This will compute (5 / 5) - 25, will display "Negative result", and return -24.0.
 print(my_operation_2(10, 10, 50)) # This will compute (10 / 10) - 50, will display "Negative result", and return -49.0.
 print(my_operation_2(10, 2, 5)) # This will compute (10 / 2) - 5, will display "Result is zero", and return 0.0.
+
+# Mission 7 : Create a function that takes a number as a parameter that corresponds to gross salary and returns the net salary for executives.
+# You can specify any amount of deduction, or base them on your country's example.
+
+def net_salary(salary):
+  return salary * 0.75
+
+print(net_salary(1000)) # This will return 750.0, because the net salary is 75% of the gross salary.
+print(net_salary(2000)) # This will return 1500.0, because the net salary is 75% of the gross salary.
+print(net_salary(3000)) # This will return 2250.0, because the net salary is 75% of the gross salary.
+
+
+# Other way to do it:
+
+def executive_net_salary(gross_salary):
+  deduction = 0.25
+  return gross_salary * (1 - deduction)
+
+print(executive_net_salary(1000)) # This will return 750.0, because the net salary is 75% of the gross salary.
+print(executive_net_salary(2000)) # This will return 1500.0, because the net salary is 75% of the gross salary.
+print(executive_net_salary(3000)) # This will return 2250.0, because the net salary is 75% of the gross salary.
