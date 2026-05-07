@@ -71,3 +71,14 @@ def return_vowels(string):
   return "".join(letter for letter in string if letter in vowels)
 
 print(return_vowels("HONOLULU"))
+
+# Mission 5 : Create a function that takes 2 numbers as parameters, and return the result of a division operation.
+# Test if the denominator is equal to 0 and if so, display a message that says "You can't divide by zero.".
+
+def division(nb1, nb2):
+  if nb2 == 0:
+    return "You can't divide by 0"
+  return nb1 / nb2
+
+print(division(10, 2)) # This will return 5.0, because 10 divided by 2 is 5.
+print(division(10, 0)) # This will return "You can't divide by 0", because you can't divide by 0.
