@@ -82,3 +82,49 @@ def division(nb1, nb2):
 
 print(division(10, 2)) # This will return 5.0, because 10 divided by 2 is 5.
 print(division(10, 0)) # This will return "You can't divide by 0", because you can't divide by 0.
+
+# Mission 6 : First, choose two arithmetical operations (such as +, -, *, or /).
+# Then, create a function that takes in 3 numbers as parameters and carries out those operations, displays a message that indicating 
+# if the result is positive, negative, or zero, and finaly returns the result.
+# If a division by zero is attempted, display a error message.
+
+# Example with multiplication and addition:
+# Calling with 0, 32, 2 will compute (0 * 32) + 2, will display "Positive result", and return 2.
+
+# Example with division and addition:
+# Calling with 21, 0, 3 will try to compute (21 / 0) + 3, will display "Divide-by-zero error", and return None.
+
+def my_operation(num1, num2, num3):
+  result = (num1 * num2) - num3
+
+  if result < 0:
+   return ("Negative result", result)
+  elif result > 0:
+    return ("Positive result", result)
+  else:
+    return ("Result is zero", result)
+  
+print(my_operation(0, 32, 2)) # This will compute (0 * 32) - 2, will display "Negative result", and return -2.
+print(my_operation(21, 0, 3)) # This will compute (21 * 0) - 3, will display "Negative result", and return -3.  
+print(my_operation(5, 5, 25)) # This will compute (5 * 5) - 25, will display "Result is zero", and return 0.
+print(my_operation(10, 10, 50)) # This will compute (10 * 10) - 50, will display "Positive result", and return 50.
+print(my_operation(10, 0, 5)) # This will compute (10 * 0) - 5, will display "Negative result", and return -5.
+
+def my_operation_2(nb1, nb2, nb3):
+  if nb2 == 0:
+    return "Divide-by-zero error"
+  
+  result = (nb1 / nb2) - nb3
+
+  if result < 0:
+   return ("Negative result", result)
+  elif result > 0:
+    return ("Positive result", result)
+  else:
+    return ("Result is zero", result)
+  
+print(my_operation_2(0, 32, 2)) # This will compute (0 / 32) - 2, will display "Negative result", and return -2.0.
+print(my_operation_2(21, 0, 3)) # This will try to compute (21 / 0) - 3, will display "Divide-by-zero error", and return "Divide-by-zero error".  
+print(my_operation_2(5, 5, 25)) # This will compute (5 / 5) - 25, will display "Negative result", and return -24.0.
+print(my_operation_2(10, 10, 50)) # This will compute (10 / 10) - 50, will display "Negative result", and return -49.0.
+print(my_operation_2(10, 2, 5)) # This will compute (10 / 2) - 5, will display "Result is zero", and return 0.0.
