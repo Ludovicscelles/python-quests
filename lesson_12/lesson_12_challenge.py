@@ -149,3 +149,22 @@ def executive_net_salary(gross_salary):
 print(executive_net_salary(1000)) # This will return 750.0, because the net salary is 75% of the gross salary.
 print(executive_net_salary(2000)) # This will return 1500.0, because the net salary is 75% of the gross salary.
 print(executive_net_salary(3000)) # This will return 2250.0, because the net salary is 75% of the gross salary.
+
+# Mission 8 : Create a function that can swap the values of two variables,
+# such as if variable A = 1 and variable B = 2, after applying the function, variable A = 2 and variable B = 1.
+
+def swap_values(A, B):
+  A, B = B, A
+  return A, B
+
+print(swap_values(A=1, B=2)) # This will return (2, 1), because the values of A and B have been swapped.
+
+# Other way to do it:
+
+def swap_values_2(A, B):
+  temp = A
+  A = B
+  B = temp
+  return A, B
+
+print(swap_values_2(A=1, B=2)) # This will return (2, 1), because the values of A and B have been swapped.
