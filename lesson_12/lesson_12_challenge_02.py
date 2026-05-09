@@ -55,3 +55,45 @@ def fill_a_list_2(sentence):
 
 fill_a_list_2("After twelve soft showers are the arch-duchess' socks dry, arch-dry?")
 print(words_2) # This will return ['After', 'twelve', 'soft', 'showers', 'are', 'the', "arch-duchess'", 'socks', 'dry,', 'arch-dry?'], because those are the words in the sentence. 
+
+# Mission 11 : Create a function that takes a string as input, converts all characters to lowercase, and returns a new string where
+# every vowel at an even index is capitalized, keeping all other characters unchanged. 
+# Example: antithetical -> AntithEtIcAl
+# Example: marvelously -> marvElOuslY
+
+string = input("Saisissez une phrase : ")
+
+def capitalize_certain_vowels(string):
+  vowels = "aeiouy"
+  result = ""
+
+  for index, letter in enumerate(string.lower()):
+    if letter in vowels and index % 2 == 0:
+      result += letter.upper()
+    else:
+      result += letter
+
+  return result
+
+
+print(capitalize_certain_vowels(string))
+
+
+# Other way to do it:
+
+string_2 = input("Saisissez une phrase : ")
+
+def capitalize_certain_vowels_2(string):
+  vowels = "aeiouy"
+  result = []
+
+  for index, letter in enumerate(string.lower()):
+    if letter in vowels and index % 2 == 0:
+      result.append(letter.upper())
+    else:
+      result.append(letter)
+
+  return "".join(result)
+
+
+print(capitalize_certain_vowels_2(string_2))
