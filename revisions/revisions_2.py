@@ -34,5 +34,12 @@ print (next_day_2("Sunday"))
 print (next_day_2("Sanurday"))
 
   
+words = []
 
-  
+def add_word(sentence):
+  words.append(sentence)
+
+add_word("Hello")
+add_word("World")
+
+print(words)

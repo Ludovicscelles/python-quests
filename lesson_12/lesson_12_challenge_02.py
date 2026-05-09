@@ -31,3 +31,27 @@ def next_day_2(day):
 print(next_day_2("Monday")) # This will return "Tuesday", because Tuesday is the next day after Monday.
 print(next_day_2("Sunday")) # This will return "Monday", because Monday is the next day after Sunday.
 print(next_day_2("dfqflksqmdj")) # This will return "Invalid day", because "dfqflksqmdj" is not a valid day.
+
+# Mission 10 : Create a function that fills an empty list with values (words) from the following string :
+# "After twelve soft showers are the arch-duchess' socks dry, arch-dry?"
+
+words = []
+
+def fill_a_list(sentence):
+  for word in sentence.split():
+    words.append(word)
+
+fill_a_list("After twelve soft showers are the arch-duchess' socks dry, arch-dry?")
+print(words) # This will return ['After', 'twelve', 'soft', 'showers', 'are', 'the', "arch-duchess'", 'socks', 'dry,', 'arch-dry?'], because those are the words in the sentence.
+
+# Other way to do it:
+
+words_2 = []
+
+def fill_a_list_2(sentence):
+  words_2.extend(sentence.split())
+# The extend() method is used to add the elements of a list (or any iterable) to the end of the list. 
+# In this case, we are using it to add the words from the sentence to the words_2 list.
+
+fill_a_list_2("After twelve soft showers are the arch-duchess' socks dry, arch-dry?")
+print(words_2) # This will return ['After', 'twelve', 'soft', 'showers', 'are', 'the', "arch-duchess'", 'socks', 'dry,', 'arch-dry?'], because those are the words in the sentence. 
