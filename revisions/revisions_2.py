@@ -33,13 +33,14 @@ print (next_day_2("Thursday"))
 print (next_day_2("Sunday"))
 print (next_day_2("Sanurday"))
 
-  
+# Mission 10 : Create a function that fills an empty list with values (words) from the following string :
+# "After twelve soft showers are the arch-duchess' socks dry, arch-dry?"
+
 words = []
 
-def add_word(sentence):
-  words.append(sentence)
+def fill_a_list(string):
+   for word in string.split():
+      words.append(word)
 
-add_word("Hello")
-add_word("World")
-
+fill_a_list("After twelve soft showers are the arch-duchess' socks dry, arch-dry?")
 print(words)
