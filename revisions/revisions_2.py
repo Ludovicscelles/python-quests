@@ -54,3 +54,46 @@ def fill_a_list_2(string):
 
 fill_a_list_2("Once upon a time, in a far away land, a young prince lived in a shining castle.")
 print(words_2)
+
+
+# Mission 11 : Create a function that takes a string as input, converts all characters to lowercase, and returns a new string where
+# every vowel at an even index is capitalized, keeping all other characters unchanged. 
+# Example: antithetical -> AntithEtIcAl
+# Example: marvelously -> marvElOuslY
+
+string = input("Saisissez votre texte : ")
+
+def capitalize_certain_vowels(string):
+  
+  vowels = "aeiouy"
+  result = ""
+
+  for index, letter in enumerate(string.lower()):
+    if index % 2 == 0 and letter in vowels:
+      result += letter.upper()
+    else:
+      result += letter
+  
+  return result
+
+print(capitalize_certain_vowels(string))
+      
+
+# Other way to do it
+
+string_2 = input ("Saisissez votre texte : ")
+
+def capitalize_certain_vowels_2(string_2):
+   
+  vowels = "aeiouy"
+  result = []
+
+  for index, letter in enumerate(string_2.lower()):
+    if index % 2 == 0 and letter in vowels:
+      result.append(letter.upper())
+    else:
+      result.append(letter)
+  
+  return "".join(result)
+
+print(capitalize_certain_vowels_2(string_2))
