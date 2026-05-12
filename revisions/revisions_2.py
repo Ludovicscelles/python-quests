@@ -44,3 +44,13 @@ def fill_a_list(string):
 
 fill_a_list("After twelve soft showers are the arch-duchess' socks dry, arch-dry?")
 print(words)
+
+# Other solution
+
+words_2 = []
+
+def fill_a_list_2(string):
+   words_2.extend(string.split())
+
+fill_a_list_2("Once upon a time, in a far away land, a young prince lived in a shining castle.")
+print(words_2)
