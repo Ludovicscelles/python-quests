@@ -125,3 +125,43 @@ def create_empty_grid_2(n):
 
 print(create_empty_grid_2(3)) # This will return [[[], [], []], [[], [], []], [[], [], []]], because it creates a 3x3 grid of empty lists.
 print(create_empty_grid_2(2)) # This will return [[[], []], [[], []]], because it creates a 2x2 grid of empty lists.
+
+
+# Mission 13 : Create a function that takes two inputs, their year of birth and first name.
+# Convert the year of birth into an int and subtract it from the current year (you can do it using a certain module : -P)
+# Then display the message: Hello [first name], today you are (or you will be this year) [age] years old.
+# When testing the function, ask the user for the parameters!
+
+from datetime import datetime
+
+year_of_birth = int(input("What is your year of birth? "))
+first_name = input("What is your first name? ")
+
+def display_your_age(year_of_birth, first_name):
+  current_year = datetime.now().year
+  age = current_year - year_of_birth
+  return (
+    "Hello "
+    + first_name
+    + ", today you are (or you will be this year) "
+    + str(age)
+    + " years old."
+  )
+
+print(display_your_age(year_of_birth, first_name))
+
+# Other way to do it without return and print (f-string) in the function:
+
+from datetime import datetime
+
+def display_your_age_2(year_of_birth_2, first_name_2):
+  current_year = datetime.now().year
+  age = current_year - year_of_birth
+
+  print(f"Hello {first_name}, today you are (or you will be this year) {age} years old.")
+
+year_of_birth_2 = int(input("What is your year of birth? "))
+first_name_2 = input("What is your first name? ")
+
+display_your_age_2(year_of_birth_2, first_name_2)
+
