@@ -97,3 +97,31 @@ def capitalize_certain_vowels_2(string):
 
 
 print(capitalize_certain_vowels_2(string_2))
+
+
+# Mission 12 = Create a function that takes a number n as parameter,
+# and return a list containing n lists, each containing n empty lists.
+
+def create_empty_grid(n):
+  return [[[] for j in range(n)] for i in range(n)]
+
+print(create_empty_grid(3)) # This will return [[[], [], []], [[], [], []], [[], [], []]], because it creates a 3x3 grid of empty lists.
+print(create_empty_grid(2)) # This will return [[[], []], [[], []]], because it creates a 2x2 grid of empty lists.
+
+# Other way to do it with loops:
+
+def create_empty_grid_2(n):
+  grid = []
+
+  for i in range(n):
+    row = []
+
+    for j in range(n):
+      row.append([])
+
+    grid.append(row)
+
+  return grid
+
+print(create_empty_grid_2(3)) # This will return [[[], [], []], [[], [], []], [[], [], []]], because it creates a 3x3 grid of empty lists.
+print(create_empty_grid_2(2)) # This will return [[[], []], [[], []]], because it creates a 2x2 grid of empty lists.
