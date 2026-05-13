@@ -96,4 +96,31 @@ def capitalize_certain_vowels_2(string_2):
   
   return "".join(result)
 
-print(capitalize_certain_vowels_2(string_2))
+
+# Mission 12 = Create a function that takes a number n as parameter,
+# and return a list containing n lists, each containing n empty lists.
+
+
+def create_a_grid(n):
+   
+   return [[[] for j in range(n) ] for i in range(n)]
+
+print(create_a_grid(2))
+
+# Other way to do it :
+
+def create_a_grid_2(n):
+   
+  grid = []
+
+  for i in range(n):
+    row = []
+
+    for j in range(n):
+      row.append([])
+
+    grid.append(row)
+  
+  return grid
+
+print(create_a_grid_2(3))
