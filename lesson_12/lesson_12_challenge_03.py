@@ -56,3 +56,19 @@ def factorial(nb):
 print(factorial(5)) # Output: 120
 print(factorial(0)) # Output: 1
 print(factorial(-3)) # Output: "Impossible de calculer le factoriel d'un nombre négatif"
+
+# Mode of a list of numbers: Create a function that returns the mode of a list of numbers, for instance [68, 99, 65, 44, 77, 44, 44] --> 44.
+
+def get_mode(list_num):
+    
+  counts = {}
+
+  for i in list_num:
+    if i in counts:
+      counts[i] += 1
+    else:
+      counts[i] = 1
+
+  return max(counts, key=counts.get)
+
+print(get_mode([15, 2, 52, 15, 15, 23, 55, 56, 15]))
