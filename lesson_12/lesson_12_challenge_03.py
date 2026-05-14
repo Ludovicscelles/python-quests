@@ -38,3 +38,21 @@ def abs_value(n):
 
 print(abs_value(-5)) # Output: 5
 print(abs_value(7)) # Output: 7
+
+# Factorial of a number: Create a function that returns the factorial of a number.
+
+def factorial(nb):
+    
+    if nb < 0:
+        return "Impossible de calculer le factoriel d'un nombre négatif"
+    
+    fact = 1
+
+    for num in range(2, nb + 1):
+        fact *= num
+
+    return fact
+
+print(factorial(5)) # Output: 120
+print(factorial(0)) # Output: 1
+print(factorial(-3)) # Output: "Impossible de calculer le factoriel d'un nombre négatif"
