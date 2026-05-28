@@ -116,3 +116,29 @@ def factorial_3(n):
 print(factorial_3(4))
 print(factorial_3(-2))
 print(factorial_3(8))
+
+#####
+
+def get_mode(arr):
+    if arr == []:
+        return None
+    else:
+        return max(set(arr), key=arr.count)
+
+print(get_mode([1,7,12,5,6,8,12,9,12]))
+
+# Other way to do it:
+
+def get_mode_2(arr):
+
+    counts = {}
+
+    for i in arr:
+        if i in counts:
+            counts[i] += 1
+        else:
+            counts[i] = 1
+        
+    return max(counts, key=counts.get)
+
+print(get_mode_2([1,7,12,5,6,8,12,9,12]))
