@@ -16,7 +16,7 @@ Yes, all those functions already exist in dedicated modules, and you may not reu
 Don't forget to test your functions with at least two possible cases! """
 
 def square_of_a_number(n):
-        return n ** 2
+    return n ** 2
 
 print(square_of_a_number(4))
 print(square_of_a_number(-8))
@@ -24,7 +24,23 @@ print(square_of_a_number(-8))
 # Other way to do it :
 
 def square_of_a_number_2(n):
-        return pow(n, 2)
+    return pow(n, 2)
 
 print(square_of_a_number_2(9))
 print(square_of_a_number_2(100))
+
+####
+
+def cube_of_a_number(n):
+    return n ** 3
+
+print(cube_of_a_number(2))
+print(cube_of_a_number(7))
+
+# Other way to do it :
+
+def cube_of_a_number_2(n):
+    return pow(n, 3)
+
+print(cube_of_a_number_2(5))
+print(cube_of_a_number_2(-3))
