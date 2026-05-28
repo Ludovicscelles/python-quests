@@ -85,3 +85,34 @@ def factorial(n):
 
 print(factorial(5))
 print(factorial(10))
+
+# Other way to do it:
+
+import math
+
+def factorial_2(n):
+    if n < 0:
+        return "Impossible de calculer la factorielle d'un nombre négatif"
+    return math.factorial(n)
+
+print(factorial_2(5))
+print(factorial_2(-10))
+
+# Other way to do it:
+
+def factorial_3(n):
+    
+    if n < 0:
+        return "Impossible de calculer la factorielle d'un nombre négatif"
+    
+    fact = 1
+
+    while n > 1:
+        fact *= n
+        n -= 1
+    
+    return fact
+
+print(factorial_3(4))
+print(factorial_3(-2))
+print(factorial_3(8))
