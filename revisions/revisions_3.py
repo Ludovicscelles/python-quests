@@ -70,3 +70,18 @@ def absolute_value_3(n):
 
 print(absolute_value_3(-123))
 print(absolute_value_3(-12.389))
+
+####
+
+def factorial(n):
+    if n < 0:
+        return "Impossible de calculer la factorielle d'un nombre négatif"
+    
+    fact = 1
+    for nb in range(2, n + 1):
+        fact *= nb
+    
+    return fact
+
+print(factorial(5))
+print(factorial(10))
