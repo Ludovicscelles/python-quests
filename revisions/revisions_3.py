@@ -44,3 +44,29 @@ def cube_of_a_number_2(n):
 
 print(cube_of_a_number_2(5))
 print(cube_of_a_number_2(-3))
+
+####
+
+def absolute_value(n):
+    return abs(n)
+
+print(absolute_value(-128))
+print(absolute_value(-15.29))
+
+# Other way to do it:
+
+def absolute_value_2(n):
+    if n < 0:
+        return -n
+    return n
+
+print(absolute_value_2(-15.33))
+print(absolute_value_2(7581))
+
+# Other way to do it:
+
+def absolute_value_3(n):
+    return -n if n < 0 else n
+
+print(absolute_value_3(-123))
+print(absolute_value_3(-12.389))
