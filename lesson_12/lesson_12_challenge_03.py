@@ -72,3 +72,24 @@ def get_mode(list_num):
   return max(counts, key=counts.get)
 
 print(get_mode([15, 2, 52, 15, 15, 23, 55, 56, 15]))
+
+# Average of a list of numbers: Create a function that returns the average of a list of numbers.
+
+def average(list_num):
+    total = 0
+    for i in list_num:
+      total += i
+    
+    return total/len(list_num)
+   
+print(average([15,24,8,85,112]))
+
+# Other way to do it
+
+def average_2(list_num):
+   if len(list_num) == 0:
+      return 0
+   
+   return round(sum(list_num) / len(list_num), 2)
+
+print(average_2([15.251, 18.955, 13.212, 27.355]))
