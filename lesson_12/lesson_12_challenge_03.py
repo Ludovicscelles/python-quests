@@ -93,3 +93,12 @@ def average_2(list_num):
    return round(sum(list_num) / len(list_num), 2)
 
 print(average_2([15.251, 18.955, 13.212, 27.355]))
+
+# Other way to do it
+
+from statistics import mean
+
+def average_3(list_num):
+   return round(mean(list_num), 2)
+
+print(average_3([12.222, 24.895, 52.225]))
