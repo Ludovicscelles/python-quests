@@ -102,3 +102,47 @@ def average_3(list_num):
    return round(mean(list_num), 2)
 
 print(average_3([12.222, 24.895, 52.225]))
+
+# Minimum of a list of numbers: Create a function that returns the minimum from within a list of numbers.
+
+def minimum(list_num):
+   return min(list_num)
+
+print(minimum([22,1,3,6,-2,7]))
+print(minimum([25.523, -22.312, 0.128, 10.932]))
+
+# Other way to do it
+
+def minimum_2(list_num):
+   
+    min_number = list_num[0]
+
+    for i in list_num:
+        if i < min_number:
+            min_number = i
+
+    return min_number
+      
+print(minimum_2([1,4,-5,0,2,6]))
+print(minimum_2([-902, -1502, 85.9852, 25.652]))
+
+# Other way to do it: 
+        
+def minimum_3(list_num):
+   
+    min_number = list_num[0]
+    index = 1
+
+    while index < len(list_num):
+      
+        if list_num[index] < min_number:
+            min_number = list_num[index]
+        
+        index += 1
+    
+    return min_number
+
+
+    
+print(minimum_3([-5,-12,-24,0,5,8,15]))
+print(minimum_3([8,9.25,9.825,12,15,1.12,85.98]))
