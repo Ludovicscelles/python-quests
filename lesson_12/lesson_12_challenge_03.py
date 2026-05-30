@@ -108,7 +108,7 @@ print(average_3([12.222, 24.895, 52.225]))
 def minimum(list_num):
    return min(list_num)
 
-print(minimum([22,1,3,6,-2,7]))
+print(minimum([22, 1, 3, 6, -2, 7]))
 print(minimum([25.523, -22.312, 0.128, 10.932]))
 
 # Other way to do it
@@ -123,7 +123,7 @@ def minimum_2(list_num):
 
     return min_number
       
-print(minimum_2([1,4,-5,0,2,6]))
+print(minimum_2([1, 4, -5, 0, 2, 6]))
 print(minimum_2([-902, -1502, 85.9852, 25.652]))
 
 # Other way to do it: 
@@ -144,5 +144,54 @@ def minimum_3(list_num):
 
 
     
-print(minimum_3([-5,-12,-24,0,5,8,15]))
-print(minimum_3([8,9.25,9.825,12,15,1.12,85.98]))
+print(minimum_3([-5, -12, -24, 0, 5, 8, 15]))
+print(minimum_3([8, 9.25, 9.825, 12, 15, 1.12, 85.98]))
+
+# Maximum of a list of numbers: Create a function that returns the maximum from within a list of numbers.
+
+def maximum(list_num):
+   return max(list_num)
+
+print(maximum([-5, 15, 151, 122, 121, 52, -2]))
+print(maximum([-12, -52, -12.25, 78.98, 55, 21, 14.78]))
+
+# Other way to do it:
+
+def maximum_2(list_num):
+
+    max_number = list_num[0]
+
+    for i in list_num:
+        if i > max_number:
+            max_number = i
+
+    return max_number
+
+print(maximum_2([1002, 952, 550, 330, 1350, 1412, 1050]))
+print(maximum_2([-501, -512.23, 0.128, -12.152, -330.99]))
+
+# Other way to dot it:
+
+def maximum_3(list_num):
+
+    max_number = list_num[0]
+    index = 1
+
+    while index < len(list_num):
+        if list_num[index] > max_number:
+            max_number = list_num[index]
+        index += 1
+
+    return max_number
+
+print(maximum_3([228, 128, 302, 299, 301, 152]))
+
+# Optional Question: Create a function that returns the mode of a list of numbers when more than one modal value is present in a given data set. 
+# For example [68, 68, 68, 99, 65, 44, 77, 44, 44] --> [68, 44]
+
+from statistics import multimode
+
+def get_modes(list_num):
+    return multimode(list_num)
+
+print(get_modes([68, 68, 68, 99, 65, 44, 77, 44, 44]))
