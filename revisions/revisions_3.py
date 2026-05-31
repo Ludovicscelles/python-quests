@@ -220,3 +220,43 @@ def get_minimum_3(numbers_arr):
 
 print(get_minimum_3([10002, 11050, 9980, 10512, 10111]))
 print(get_minimum_3([0.1245, -0.565465, -0.46654, 0.456546, 0.54564]))
+
+# Maximum of a list of numbers: Create a function that returns the maximum from within a list of numbers.
+
+def get_maximum(numbers_array):
+    return max(numbers_array)
+
+print(get_maximum([16952, 18265, 19856, 17523, 16985, 16020]))
+print(get_maximum([0.005565, 0.0064565, 0.00246664, 0.0035464, 0.00245654]))
+
+# Other way to do it:
+
+def get_maximum_2(numbers_array):
+
+    max_number = numbers_array[0]
+
+    for num in numbers_array:
+        if num > max_number:
+            max_number = num
+
+    return max_number
+
+print(get_maximum_2([17522, 17756, 17895, 16982, 17822, 17551]))
+print(get_maximum_2([30.12, 31.95, 32.05, 31.01, 33.96, 32.52, 32.52]))
+
+# Other way to do it:
+
+def get_maximum_3(numbers_array):
+
+    max_number = numbers_array[0]
+    index = 1
+
+    while index < len(numbers_array):
+        if numbers_array[index] > max_number:
+            max_number = numbers_array[index]
+        index += 1
+
+    return max_number
+
+print(get_maximum_3([1978, 2002, 1985, 1994, 1999, 2000]))
+print(get_maximum_3([628000, 590000, 627000, 595000, 712000, 705000, 703000]))
