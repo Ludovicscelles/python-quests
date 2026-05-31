@@ -142,3 +142,40 @@ def get_mode_2(arr):
     return max(counts, key=counts.get)
 
 print(get_mode_2([1,7,12,5,6,8,12,9,12]))
+
+# Average of a list of numbers: Create a function that returns the average of a list of numbers.
+
+def average(numbers_arr):
+
+    total = 0
+
+    for num in numbers_arr:
+        total += num
+
+    return round(total/len(numbers_arr), 2)
+
+
+print(average([12.52, 15,52, 14.78, 13.1985]))
+print(average([0.545464, 5.45456, 4.4565645, 3.6455656]))
+
+# Other way to do it:
+
+def average_2(numbers_arr):
+    if len(numbers_arr) == 0:
+        return 0
+    
+    return round(sum(numbers_arr) / len(numbers_arr), 2)
+
+print(average_2([52.4655, 85.64564, 95.456654, 78.4545654]))
+print(average_2([5.546456, 5.654546, 5.445654, 5.456456]))
+
+# Other way to do it:
+
+from statistics import mean
+
+def average_3(numbers_arr):
+    return round(mean(numbers_arr), 2)
+
+print(average_3([80.5464, 90.44645, 85.45655, 88.4564]))
+print(average_3([1.456564, 1.47789897, 1.22366, 1.0465123]))
+    
