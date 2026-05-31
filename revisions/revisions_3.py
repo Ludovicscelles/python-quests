@@ -178,4 +178,45 @@ def average_3(numbers_arr):
 
 print(average_3([80.5464, 90.44645, 85.45655, 88.4564]))
 print(average_3([1.456564, 1.47789897, 1.22366, 1.0465123]))
+
+#######
+
+# Minimum of a list of numbers: Create a function that returns the minimum from within a list of numbers.
     
+def get_minimun(numbers_arr):
+    return min(numbers_arr)
+
+print(get_minimun([7, 8, -2, 0, 1, 9, 3]))
+print(get_minimun([0.98, 0.205, 3.52, 8.12, 5.45]))
+
+# Other way to do it:
+
+def get_minimum_2(numbers_arr):
+
+    min_number = numbers_arr[0]
+
+    for num in numbers_arr:
+        if num < min_number:
+            min_number = num
+
+    return min_number
+
+print(get_minimum_2([-400, -700, -600, -710, -500, -130]))
+print(get_minimum_2([988, 999, 982, 981, 975, 974, 971, 978, 980, 981, 982]))
+
+# Other way to do it:
+
+def get_minimum_3(numbers_arr):
+
+    min_number = numbers_arr[0]
+    index = 1
+
+    while index < len(numbers_arr):
+        if numbers_arr[index] < min_number:
+            min_number = numbers_arr[index]
+        index += 1
+
+    return min_number
+
+print(get_minimum_3([10002, 11050, 9980, 10512, 10111]))
+print(get_minimum_3([0.1245, -0.565465, -0.46654, 0.456546, 0.54564]))
