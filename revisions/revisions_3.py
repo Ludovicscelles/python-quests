@@ -260,3 +260,40 @@ def get_maximum_3(numbers_array):
 
 print(get_maximum_3([1978, 2002, 1985, 1994, 1999, 2000]))
 print(get_maximum_3([628000, 590000, 627000, 595000, 712000, 705000, 703000]))
+
+######
+
+# Optional Question: Create a function that returns the mode of a list of numbers when more than one modal value is present in a given data set. 
+# For example [68, 68, 68, 99, 65, 44, 77, 44, 44] --> [68, 44]
+
+from statistics import multimode
+
+def get_modes(numbers_array):
+    return multimode(numbers_array)
+
+print(get_modes([68, 68, 68, 99, 65, 44, 77, 44, 44]))
+print(get_modes([25, 24, 25, 22, 22, 28, 32]))
+
+# Other way to do it:
+
+def get_modes_2(numbers_array):
+
+    counts = []
+
+    for num in numbers_array:
+        counts.append(numbers_array.count(num))
+    
+    max_count = max(counts)
+
+    modes = []
+
+    for num in set(numbers_array):
+        if numbers_array.count(num) == max_count:
+            modes.append(num)
+    
+    return modes
+
+
+print(get_modes([29, 33, 36, 42, 42, 36, 28, 22]))
+print(get_modes([2.755, 2.225, 2.255, 2.225, 2.755, 2.822]))
+    

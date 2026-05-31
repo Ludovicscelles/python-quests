@@ -210,7 +210,7 @@ def get_modes_2(list_num):
 
     modes = []
 
-    for num in list_num:
+    for num in set(list_num):
 
         if list_num.count(num) == max_count:
             modes.append(num)
@@ -220,3 +220,6 @@ def get_modes_2(list_num):
 
 print(get_modes_2([15, 12, 12, 11, 10, 8, 15, 8]))
 print(get_modes_2([1500, 1600, 1501, 1600, 1499, 1890, 1501]))
+
+#
+
