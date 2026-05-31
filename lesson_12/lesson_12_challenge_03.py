@@ -195,3 +195,28 @@ def get_modes(list_num):
     return multimode(list_num)
 
 print(get_modes([68, 68, 68, 99, 65, 44, 77, 44, 44]))
+
+# Other way to do it:
+
+def get_modes_2(list_num):
+
+    counts = []
+
+    for num in list_num:
+        counts.append(list_num.count(num))
+
+    max_count = max(counts)
+
+
+    modes = []
+
+    for num in list_num:
+
+        if list_num.count(num) == max_count:
+            modes.append(num)
+    
+    return modes
+
+
+print(get_modes_2([15, 12, 12, 11, 10, 8, 15, 8]))
+print(get_modes_2([1500, 1600, 1501, 1600, 1499, 1890, 1501]))
