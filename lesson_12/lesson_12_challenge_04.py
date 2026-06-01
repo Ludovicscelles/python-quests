@@ -127,5 +127,48 @@ def primes_less_than_2(n):
 print(primes_less_than_2(15))
 print(primes_less_than_2(100))
         
-                
-                
+
+# Continuation of Fibonacci : Create a function that takes no parameters, but returns the first 30 numbers in the Fibonnaci sequence.
+
+def fibonacci():
+
+        fib = [0, 1]
+
+        for i in range(2, 30):
+                fib.append(fib[i - 1] + fib[i - 2])
+
+        return fib
+
+print(fibonacci())
+
+# Other way to do it:
+
+def fibonacci_2():
+
+        fib = [0, 1]
+
+        while len(fib) < 30:
+                fib.append(fib[- 1] + fib[- 2])
+        
+        return fib
+
+print(fibonacci_2())
+
+# Other way to do it:
+
+def fibonacci_3():
+
+        fib = []
+        a = 0
+        b = 1
+
+        for _ in range(30):
+                fib.append(a)
+
+                temp = a + b
+                a = b
+                b = temp
+
+        return fib
+
+print(fibonacci_3())
