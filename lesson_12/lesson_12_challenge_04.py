@@ -35,3 +35,55 @@ def calculate_power_3(num, pw):
 
 print(calculate_power_3(2, 3))
 print(calculate_power_3(5, 5))
+
+
+# is prime number : Create a function that takes a number and returns True if it's a prime number, False otherwise.
+
+def is_prime(n):
+
+        if n <= 1:
+                return False
+        
+        for i in range(2, n):
+                if n % i == 0:
+                        return False
+        
+        return True
+
+print(is_prime(7))
+print(is_prime(8))
+print(is_prime(4))
+
+
+# Other way to do it: 
+
+def is_prime_2(n):
+
+        if n <= 1:
+                return False
+        
+        for i in range(2, int(n ** 0.5) +1):
+                if n % i == 0:
+                        return False
+        
+        return True
+
+print(is_prime_2(17))
+print(is_prime_2(19))
+print(is_prime_2(58))
+
+# Other way to do it: 
+
+def is_prime_3(n):
+
+        if n <= 1:
+                return False
+        
+        return all(
+                n % i != 0
+                for i in range(2, int(n ** 0.5) + 1)
+        )
+
+print(is_prime_3(71))
+print(is_prime_3(73))
+print(is_prime_3(24))
