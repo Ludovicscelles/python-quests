@@ -87,3 +87,45 @@ def is_prime_3(n):
 print(is_prime_3(71))
 print(is_prime_3(73))
 print(is_prime_3(24))
+
+
+# Prime number less than x : Create a function that takes a number and returns all the prime numbers that are less than it.
+
+# version 1 - using the is_prime_3 function:
+
+def primes_less_than(n):
+
+        primes = []
+
+        for nb in range(2, n):
+                if is_prime_3(nb):
+                        primes.append(nb)
+        
+        return primes
+
+print(primes_less_than(15))
+print(primes_less_than(100))
+
+# version 2 - without using the is_prime_3 function:
+
+def primes_less_than_2(n):
+
+        if n <= 1:
+                return []
+
+        primes = []
+
+        for nb in range(2, n):
+                if all(
+                        nb % i != 0
+                        for i in range(2, int(nb ** 0.5) + 1)
+                        ):
+
+                        primes.append(nb)
+        return primes
+
+print(primes_less_than_2(15))
+print(primes_less_than_2(100))
+        
+                
+                
