@@ -172,3 +172,29 @@ def fibonacci_3():
         return fib
 
 print(fibonacci_3())
+
+# Square root: Create a function that returns the square root of a number.
+
+def square_root(nb):
+        return nb ** 0.5
+
+print(square_root(25))
+print(square_root(50))
+
+# Other way to do it:
+
+import math
+
+def square_root_2(nb):
+        return math.sqrt(nb)
+
+print(square_root_2(100))
+print(square_root_2(26))
+
+# Other way to do it:
+
+def square_root_3(nb):
+        return pow(nb, 0.5)
+
+print(square_root_3(36))
+print(square_root_3(49))
