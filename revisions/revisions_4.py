@@ -107,3 +107,41 @@ def is_prime_4(nb):
 print(is_prime_4(83))
 print(is_prime_4(84))
 print(is_prime_4(89))
+
+# Prime number less than x : Create a function that takes a number and returns all the prime numbers that are less than it.
+
+def prime_less_than(n):
+
+  primes = []
+
+  for nb in range(2, n):
+    if is_prime_4(nb):
+      primes.append(nb)
+
+  return primes
+
+print(prime_less_than(21))
+print(prime_less_than(50))
+
+# Other way to do it:
+
+def prime_less_than_bis(n):
+
+  if n <= 1:
+    return []
+
+  primes = []
+
+  for nb in range(2, n):
+    if all(
+      nb % i != 0
+      for i in range(2, int(nb ** 0.5) + 1)
+    ):
+      primes.append(nb)
+
+  return primes
+
+print(prime_less_than_bis(20))
+print(prime_less_than_bis(48))
+
+
