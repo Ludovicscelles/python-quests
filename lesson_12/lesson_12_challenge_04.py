@@ -198,3 +198,47 @@ def square_root_3(nb):
 
 print(square_root_3(36))
 print(square_root_3(49))
+
+
+""" The central theorem limits
+The code below simulates the central limit theorem. You must replace the following functions with your own functions all the while achieving the same visual result :
+
+sqrt(): Your square root function
+pow() : Your power function of x """
+
+# Code example
+
+import numpy as np
+import matplotlib.pyplot as plt
+from math import sqrt, pi, exp
+
+domain = range(-100,100)
+mu = 0
+sigma = 20
+
+f = lambda x : 1/(sqrt(2*pi*pow(sigma,2))) * exp(-pow((x-mu),2)/(2*pow(sigma,2)))
+
+y = [f(x) for x in domain]
+plt.figure("Figure 1 - using math module")
+plot = plt.plot(domain, y)
+plt.show()
+
+
+# Your code
+# The visual must be the same as above using your function
+# myFunctionRacineCarre and myFunctionPowerOfX
+
+import numpy as np
+import matplotlib.pyplot as plt
+from math import sqrt, pi, exp
+
+domain = range(-100,100)
+mu = 0
+sigma = 20
+
+f = lambda x : 1/(square_root_3(2*pi*calculate_power_2(sigma,2))) * exp(-calculate_power_2((x-mu),2)/(2*calculate_power_2(sigma,2)))
+
+y = [f(x) for x in domain]
+plt.figure("Figure 2 - using my functions")
+plot = plt.plot(domain, y)
+plt.show()
