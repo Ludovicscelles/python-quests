@@ -71,3 +71,39 @@ print(is_prime_2(47))
 print(is_prime_2(43))
 print(is_prime_2(44))
 
+# Other way to do it:
+
+def is_prime_3(nb):
+
+  if nb <= 1:
+    return False
+  
+  index = 2
+
+  while index <= int(nb ** 0.5):
+    if nb % index == 0:
+      return False
+    
+    index += 1
+
+  return True
+
+print(is_prime_3(23))
+print(is_prime_3(29))
+print(is_prime_3(28))
+
+# Other way to do it:
+
+def is_prime_4(nb):
+
+  if nb <= 1:
+    return False
+  
+  return all(
+    nb % i != 0
+    for i in range(2, int(nb ** 0.5) + 1)
+  )
+
+print(is_prime_4(83))
+print(is_prime_4(84))
+print(is_prime_4(89))
