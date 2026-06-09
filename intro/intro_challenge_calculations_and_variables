@@ -1,0 +1,175 @@
+"""
+Vous arrivez au pied d'une falaise. Là, un groupe de villageois tente frénétiquement d'ouvrir une majestueuse porte dans la paroi. Ces habitants d'un village proche vous expliquent que de terribles choses vont se produire si la porte n'est pas ouverte avant le « Grand Événement » qui aura lieu bientôt. Seul leur chef connaît la combinaison qui permettrait d'ouvrir la porte, mais il a disparu !
+
+Les villageois sont persuadés que leur chef a été capturé par le Grand Sorcier qui vit au sommet de la montagne. Ils sont néanmoins terrorisés à l'idée d'aller à sa recherche, car cette montagne est maudite. Vous leur proposez d'y aller vous-même, accompagné de votre robot.
+
+Cependant, les villageois regardent votre compagnon bizarrement. Pour les rassurer, vous vous dites qu'il serait de bon ton que votre robot affiche quelques mots sur son écran. La tradition au village est que les androïdes se présentent par le texte « Hello world! ».
+
+Ce que doit faire votre programme :
+Écrivez un programme permettant au robot d'afficher précisément le texte Hello world!.
+
+Attention : s'il y a un espace en trop, s'il y a une majuscule au lieu d'une minuscule, ou s'il y a une quelconque autre différence avec le texte indiqué ci-dessus, les villageois sentiront que quelque chose cloche avec votre robot et n'auront pas confiance en lui.
+
+"""
+
+print()
+
+def greet():
+    print("Hello world!")
+
+greet()
+
+"""
+L'un des villageois, Camthalion, est très intéressé par votre robot. 
+Il vous a longuement observé(e) alors que vous écriviez votre programme, et a souhaité écrire le sien. 
+Le robot affiche cependant les lignes dans le mauvais ordre. Pouvez-vous y remédier ?
+
+Camthalion a écrit le programme suivant :
+
+print("Ma devise est 'Parler peu mais parler bien'.")
+print("Je m'appelle Camthalion.")
+print("Coucou !")
+
+et il obtient en sortie :
+
+Ma devise est 'Parler peu mais parler bien'.
+Je m'appelle Camthalion.
+Coucou !
+
+Il veut que son programme affiche les lignes dans l'ordre suivant :
+Coucou !
+Je m'appelle Camthalion.
+Ma devise est 'Parler peu mais parler bien'.
+
+"""
+
+print()
+
+def camthalion_greet():
+    print("Coucou !")
+    print("Je m'appelle Camthalion.")
+    print("Ma devise est 'Parler peu mais parler bien'.")
+
+camthalion_greet()
+
+
+"""
+Pour vous aider à mener votre parcours vers le haut de la montagne, les villageois vous donnent quelques indications. 
+Plutôt que de les mémoriser, vous décidez d'utiliser votre robot pour les imprimer sur un bout de papier.
+
+Ce que doit faire votre programme :
+Écrivez un programme qui affiche exactement le texte qui suit :
+
+Tout droit tu grimperas,
+La clé tu trouveras,
+Habile tu seras,
+Quand tu les porteras,
+Et avec le chef tu reviendras !
+
+"""
+
+print()
+
+def guidance():
+    print("Tout droit tu grimperas,")
+    print("La clé tu trouveras,")
+    print("Habile tu seras,")
+    print("Quand tu les porteras,")
+    print("Et avec le chef tu reviendras !")
+
+guidance()
+
+
+"""
+
+Lors d'une bousculade à la sortie d'un cours, un des enfants a malencontreusement fait tomber votre robot dans les escaliers ! Celui-ci a subi des chocs et vous craignez qu'il ne fonctionne plus. Dans le petit manuel d'utilisation du robot, il est indiqué que le test de base pour savoir si le robot fonctionne est de lui faire afficher le nombre 42.
+
+Ce que doit faire votre programme :
+Votre programme doit afficher le nombre 42.
+
+"""
+
+print()
+
+def test_robot():
+    print(42)
+
+test_robot()
+
+
+"""
+
+Lors du cours d'astronomie que le professeur donne aux élèves, il leur explique le principe des éclipses, puis il leur indique la date de la prochaine éclipse totale sur Algoréa. 
+Vous connaissez donc la date de l'éclipse ainsi que la date actuelle et vous vous demandez dans combien de jours aura donc lieu cette éclipse. Notez que ces deux dates sont exprimées en nombre de jours du calendrier algoréen.
+
+Ce que doit faire votre programme :
+Vous savez que l'éclipse aura lieu le 12581e jour et que la date actuelle est le 11937e jour. 
+Votre programme doit calculer et afficher le nombre de jours qu'il faudra patienter avant de pouvoir admirer l'éclipse.
+
+"""
+
+print()
+
+def days_until_eclipse():
+    eclipse_day = 12581
+    current_day = 11937
+    days_to_wait = eclipse_day - current_day
+    print(days_to_wait)
+
+days_until_eclipse()
+
+"""
+
+Les élèves ne semblent pas à l'aise avec votre robot : ce n'est pas un être humain, ce n'est pas un animal non plus… ils sont donc très intrigués, voire même parfois un peu inquiets. Afin de les rassurer, vous souhaitez que votre robot distribue 3 bonbons à chaque élève. 
+Pour cela, vous avez besoin de calculer le nombre de bonbons à acheter.
+
+Ce que doit faire votre programme :
+L'école est formée de 4 classes, constituées respectivement de 25, 30, 27 et 22 élèves. 
+Cependant, 8 élèves sont absents aujourd'hui. 
+Sachant que chaque élève présent doit recevoir 3 bonbons, écrivez un programme qui calcule puis affiche le nombre total de bonbons nécessaires.
+
+Vous n'avez pas besoin de calculatrice : effectuez les calculs dans votre programme.
+
+"""
+
+print()
+
+students_per_class = [25, 30, 27, 22]
+total_students = sum(students_per_class)
+absent_students = 8
+present_students = total_students - absent_students
+candies_per_student = 3
+
+def calculate_candies():
+    total_candies = present_students * candies_per_student
+    print(total_candies)
+
+calculate_candies()
+
+"""
+À la fin d'une course d'endurance, les élèves d'une classe sont épuisés. Leur enseignant leur parle de l'algoréathlon, un exercice d'endurance connu sur toute la planète. 
+Il s'agit d'enchaîner 2 km de natation, 34 km de cyclisme et 6 km de course à pied en un jour, puis de le refaire un deuxième jour, et encore un troisième jour.
+Les élèves se demandent quelle distance a été parcourue après chaque jour. Vous profitez de l'occasion pour faire intervenir votre robot.
+Ce que doit faire votre programme :
+L'algoréathlon se constitue de trois étapes à effectuer chaque jour : 2 km de natation, 34 km de cyclisme et 6 km de course à pied.
+Sachant qu'un sportif répète ces trois étapes pendant 3 jours de suite, vous devez afficher la distance totale qu'il a parcourue à la fin du 1er jour, à la fin du 2e jour, puis à la fin de l'algoréathlon complet.
+Afin de rendre l'affichage convivial sur l'écran du robot, vous souhaitez mettre les trois valeurs sur une même ligne, avec une espace entre chaque valeur et la suivante.
+Important : pour écrire ce programme, vous devez mémoriser la distance parcourue en un jour en lui donnant un nom, puis utiliser ce nom pour calculer les trois réponses. Appuyez-vous sur les explications ci-dessous.
+
+
+"""
+
+print()
+
+distance_swimming = 2
+distance_cycling = 34
+distance_running = 6
+distance_per_day = distance_swimming + distance_cycling + distance_running
+distance_after_day_1 = distance_per_day
+distance_after_day_2 = distance_per_day * 2
+distance_after_day_3 = distance_per_day * 3
+
+def calculate_distances():
+    print(distance_after_day_1, distance_after_day_2, distance_after_day_3)
+
+calculate_distances()
