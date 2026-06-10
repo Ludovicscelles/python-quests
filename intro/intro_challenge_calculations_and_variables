@@ -173,3 +173,159 @@ def calculate_distances():
     print(distance_after_day_1, distance_after_day_2, distance_after_day_3)
 
 calculate_distances()
+
+
+"""
+La cour de récréation de l'école a bien besoin d'être refaite : d'une part la clôture actuelle est trop rouillée pour résister à un Borlok, et d'autre part il faudrait couvrir le sol en terre par de belles pierres pour éviter d'avoir de la boue dès qu'il pleut.
+Le professeur de la classe fait participer ses élèves : il leur demande de calculer l'aire et le périmètre du carré que forme leur cour de récréation. Les élèves n'ayant pas de règle assez longue, ils ont utilisé 4 bâtons de longueurs différentes pour mesurer le côté du carré. 
+Afin d'aider les élèves dans leurs calculs, vous décidez d'écrire un programme.
+
+Ce que doit faire votre programme :
+La cour carrée a été mesurée avec quatre bâtons de longueurs respectives 17 m, 7 m, 5 m et 2 m. La longueur du côté de la cour est égale à 5 fois le premier bâton plus 2 fois le second plus 1 fois le troisième plus 2 fois le quatrième.
+Votre programme doit afficher deux lignes : la première doit contenir la surface de la cour, et la seconde ligne doit contenir son périmètre. Les résultats doivent être exprimés en mètres carrés et en mètres, respectivement, mais vous ne devez pas afficher l'unité après la valeur numérique.
+Important : dans votre programme, commencez par calculer la longueur du côté de la cour et l'enregistrer dans une variable.
+
+"""
+
+print()
+
+stick1 = 17
+stick2 = 7
+stick3 = 5
+stick4 = 2
+
+length_of_side = 5 * stick1 + 2 * stick2 + 1 * stick3 + 2 * stick4
+area = length_of_side ** 2
+perimeter = 4 * length_of_side
+
+def area_and_perimeter():
+    print(area)
+    print(perimeter)
+
+area_and_perimeter()
+
+
+print()
+
+"""
+À la récréation, vous croisez un groupe d'enfants qui vous proposent de participer à leur jeu. Vous acceptez de bon cœur et voilà votre robot engagé dans une partie de cache-cache !
+
+Ce que doit faire votre programme :
+Le robot devra compter jusqu'à 100, c'est à dire afficher les entiers de 1 à 100, un par ligne, et ensuite afficher « J'arrive ! ». Ainsi, s'il ne devait compter que jusqu'à 3 au lieu de 100, votre robot devrait afficher :
+
+↳
+1
+2
+3
+J'arrive !
+Important : votre programme ne doit pas faire plus d'une quinzaine de lignes.
+
+"""
+
+
+def hide_and_seek():
+    for i in range(1, 101):
+        print(i)
+    print("J'arrive !")
+
+hide_and_seek()
+
+
+""" Orthonart, l'un des élèves de la classe, vous a demandé de lui apprendre à utiliser votre petit robot. Après lui avoir expliqué les bases de la programmation, vous lui prêtez le robot pendant une petite heure, le temps de planifier quelques projets avec le professeur de la classe. Lorsque vous revenez, vous décrouvrez qu'il a eu le temps d'écrire 7 programmes. Un bon nombre d'entre eux sont cependant invalides. Indiquez-lui lesquels afin qu'il puisse apprendre de ses erreurs.
+
+Ce que doit faire votre programme :
+Vous devez lire attentivement les programmes donnés ci-dessous pour déterminer s'ils sont valides ou non, et ce sans essayer de les exécuter. Pour chacun des 7 programmes, vous devez afficher sur une ligne soit la lettre « V » pour indiquer que le programme est valide, soit la lettre « I » pour indiquer qu'il est invalide. Par exemple, si vous pensez que les 4 premiers programmes s'exécuteront sans erreur et que les 3 suivants entraîneront des erreurs, faites afficher à votre programme :
+
+↳
+V
+V
+V
+V
+I
+I
+I
+
+Voici les sept programmes.
+
+1.
+nbBillesRouges = 4
+nbBillesBleues = 6
+print(nbBillesRouges + nbBillesBleues)
+
+2.
+taille = 4
+taille = 6
+print(taille)
+
+3.
+nbBillesBleues = 3
+print(nbBillesRouges)
+
+4.
+2 = 2
+print(2)
+
+5.
+âge1 = 6
+âge2 = 4
+âge2 = âge1
+print(âge2)
+
+6.
+prix = 10
+prix - 2 = prix
+print(prix)
+
+7.
+prix = âge - 7
+âge = 12
+print(prix)
+
+"""
+
+print()
+
+valid = "V"
+invalid = "I"
+
+def check_programs():
+    print(valid)  # Programme 1
+    print(valid)  # Programme 2
+    print(invalid)  # Programme 3
+    print(invalid)  # Programme 4
+    print(valid)  # Programme 5
+    print(invalid)  # Programme 6
+    print(invalid)  # Programme 7
+
+check_programs()
+
+"""
+Afin d'amuser un groupe d'enfants, vous décidez de leur construire une fusée. 
+Après leur avoir rappelé qu'il ne faut pas le faire sans un adulte, vous sortez un sachet de thé de votre poche et annoncez que ce sera votre fusée ! Incrédules, les enfants vous voient enlever l'agrafe, l'étiquette, vider le thé, et former un cylindre. 
+Il ne reste plus qu'à allumer le haut du cylindre et faire le décompte avant le décollage de la fusée !
+
+Ce que doit faire votre programme :
+Votre programme devra lancer le décompte en partant de 100 puis annoncer le décollage, c'est-à-dire afficher une séquence d'annonces de la forme :
+
+↳
+100
+99
+...
+2
+1
+0
+Décollage ! 
+en remplaçant les « … » par toutes les valeurs intermédiaires.
+
+Important : votre programme ne doit pas faire plus d'une quinzaine de lignes.
+
+
+
+"""
+def rocket_takeoff():
+    for i in range(100, -1, -1):
+        print(i)
+    print("Décollage !")
+
+rocket_takeoff()
+    
