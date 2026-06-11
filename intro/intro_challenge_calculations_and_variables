@@ -1,86 +1,4 @@
 """
-Vous arrivez au pied d'une falaise. Là, un groupe de villageois tente frénétiquement d'ouvrir une majestueuse porte dans la paroi. Ces habitants d'un village proche vous expliquent que de terribles choses vont se produire si la porte n'est pas ouverte avant le « Grand Événement » qui aura lieu bientôt. Seul leur chef connaît la combinaison qui permettrait d'ouvrir la porte, mais il a disparu !
-
-Les villageois sont persuadés que leur chef a été capturé par le Grand Sorcier qui vit au sommet de la montagne. Ils sont néanmoins terrorisés à l'idée d'aller à sa recherche, car cette montagne est maudite. Vous leur proposez d'y aller vous-même, accompagné de votre robot.
-
-Cependant, les villageois regardent votre compagnon bizarrement. Pour les rassurer, vous vous dites qu'il serait de bon ton que votre robot affiche quelques mots sur son écran. La tradition au village est que les androïdes se présentent par le texte « Hello world! ».
-
-Ce que doit faire votre programme :
-Écrivez un programme permettant au robot d'afficher précisément le texte Hello world!.
-
-Attention : s'il y a un espace en trop, s'il y a une majuscule au lieu d'une minuscule, ou s'il y a une quelconque autre différence avec le texte indiqué ci-dessus, les villageois sentiront que quelque chose cloche avec votre robot et n'auront pas confiance en lui.
-
-"""
-
-print()
-
-def greet():
-    print("Hello world!")
-
-greet()
-
-"""
-L'un des villageois, Camthalion, est très intéressé par votre robot. 
-Il vous a longuement observé(e) alors que vous écriviez votre programme, et a souhaité écrire le sien. 
-Le robot affiche cependant les lignes dans le mauvais ordre. Pouvez-vous y remédier ?
-
-Camthalion a écrit le programme suivant :
-
-print("Ma devise est 'Parler peu mais parler bien'.")
-print("Je m'appelle Camthalion.")
-print("Coucou !")
-
-et il obtient en sortie :
-
-Ma devise est 'Parler peu mais parler bien'.
-Je m'appelle Camthalion.
-Coucou !
-
-Il veut que son programme affiche les lignes dans l'ordre suivant :
-Coucou !
-Je m'appelle Camthalion.
-Ma devise est 'Parler peu mais parler bien'.
-
-"""
-
-print()
-
-def camthalion_greet():
-    print("Coucou !")
-    print("Je m'appelle Camthalion.")
-    print("Ma devise est 'Parler peu mais parler bien'.")
-
-camthalion_greet()
-
-
-"""
-Pour vous aider à mener votre parcours vers le haut de la montagne, les villageois vous donnent quelques indications. 
-Plutôt que de les mémoriser, vous décidez d'utiliser votre robot pour les imprimer sur un bout de papier.
-
-Ce que doit faire votre programme :
-Écrivez un programme qui affiche exactement le texte qui suit :
-
-Tout droit tu grimperas,
-La clé tu trouveras,
-Habile tu seras,
-Quand tu les porteras,
-Et avec le chef tu reviendras !
-
-"""
-
-print()
-
-def guidance():
-    print("Tout droit tu grimperas,")
-    print("La clé tu trouveras,")
-    print("Habile tu seras,")
-    print("Quand tu les porteras,")
-    print("Et avec le chef tu reviendras !")
-
-guidance()
-
-
-"""
 
 Lors d'une bousculade à la sortie d'un cours, un des enfants a malencontreusement fait tomber votre robot dans les escaliers ! Celui-ci a subi des chocs et vous craignez qu'il ne fonctionne plus. Dans le petit manuel d'utilisation du robot, il est indiqué que le test de base pour savoir si le robot fonctionne est de lui faire afficher le nombre 42.
 
@@ -328,4 +246,64 @@ def rocket_takeoff():
     print("Décollage !")
 
 rocket_takeoff()
+
+
+"""
+
+L'automne ayant été très pluvieux, les Bufo Algo, une espèce locale de crapauds, se sont reproduits en grand nombre, et les habitants ont constaté que leur nombre doublait chaque semaine ! 
+Leurs prédateurs naturels, les couleuvres (un type de serpent), sont complètement dépassés !
+
+Avoir trop de crapauds est très gênant (on ne peut plus dormir) ! 
+Les villageois décident donc d'élever un grand nombre de couleuvres avec lesquelles ils pourront contrôler le nombre de crapauds. 
+Il leur faut tout d'abord estimer le nombre de crapauds qu'il y aura au cours des semaines qui viennent.
+Ils vous demandent votre aide.
+
+Ce que doit faire votre programme :
+Sachant qu'il y a actuellement 1337 crapauds et que leur nombre double chaque semaine, votre programme devra afficher le nombre de crapauds qu'il y aura après la 12e semaine.
+
+Important : vous devez utiliser une boucle pour calculer le nombre de crapauds.
+
+"""
+
+print()
+
+def total_toads():
+    toads_number = 1337
+    total_of_toads = toads_number
+    for _ in range(12):
+        total_of_toads *= 2
+
+    return total_of_toads
     
+print(total_toads())
+        
+
+
+"""
+
+C'est la dernière semaine de cours et l'école organise une grande kermesse. L'un des stands, « La foire aux bonbons », propose un jeu permettant de gagner des bonbons. Le jeu est simple : il faut atteindre le plus grand nombre de fois possible une cible sans jamais la rater. On peut gagner gros, car plus on touche la cible, et plus on gagne de bonbons à chaque fois qu'on touche la cible ! Les élèves aimeraient connaître le nombre de bonbons qu'ils peuvent gagner en fonction du nombre de tirs consécutifs réussis.
+
+Ce que doit faire votre programme :
+Toucher la cible au premier tir rapporte un bonbon, toucher la cible au deuxième tir rapporte deux bonbons de plus, la toucher au troisième tir rapporte encore trois bonbons de plus, etc. Écrivez un programme qui affiche sur la première ligne le nombre total de bonbons obtenus si l'on ne réussit qu'1 tir, puis qui affiche sur la deuxième ligne le nombre de bonbons récupérés si l'on réussit 2 tirs de suite, puis sur la troisième ligne le nombre de bonbons récupérés si l'on réussit 3 tirs de suite, etc. jusqu'à la valeur que l'on peut récupérer si l'on réussit 50 tirs de suite.
+
+Par exemple, si votre programme s'arrêtait à 5 et non à 50, il devrait afficher ceci :
+
+↳
+1
+3
+6
+10
+15
+
+
+"""
+
+def total_candies():  
+    total_of_candies = 1
+    for i in range(1, 51):
+        total_of_candies += i
+        print(total_of_candies)
+    
+    
+total_candies()
+
