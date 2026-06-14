@@ -35,12 +35,12 @@ Comme int signifie « entier » et input signifie « entrée », int(input()) pe
 
 """
 
-# side_length = int(input())
-# area = side_length ** 2
-# mass_per_square_meter = 23
-# total_mass = area * mass_per_square_meter
+side_length = int(input())
+area = side_length ** 2
+mass_per_square_meter = 23
+total_mass = area * mass_per_square_meter
 
-# print(total_mass)
+print(total_mass)
 
 """
 Une fois par an, tout habitant de plus de 15 ans doit effectuer une randonnée spirituelle, celle-ci pouvant durer plusieurs jours. La durée dépendra du temps nécessaire à chaque personne pour faire le bilan de l'année écoulée. Au cours de cette randonnée, la personne doit répéter encore et encore la même incantation, une fois par seconde. Vous vous demandez combien de fois au total l'incantation aura été répétée, selon la durée de la randonnée.
@@ -62,11 +62,11 @@ En 2 jours (le nombre donné en entrée), l'incantation sera répétée 115 20
 
 """
 
-# days_number = int(input())
-# total_seconds = 16 * 3600 * days_number
-# total_incantions = total_seconds
+days_number = int(input())
+total_seconds = 16 * 3600 * days_number
+total_incantions = total_seconds
 
-# print(total_incantions)
+print(total_incantions)
 
 """
 
@@ -84,10 +84,10 @@ print(différence)
 
 """
 
-# âgeCadet = int(input())
-# âgeAîné = int(input())
-# différence = âgeAîné - âgeCadet
-# print(différence)
+âgeCadet = int(input())
+âgeAîné = int(input())
+différence = âgeAîné - âgeCadet
+print(différence)
 
 
 """
@@ -112,11 +112,11 @@ Commentaires
 
 
 """
-# phrase = "Je dois suivre en cours"
-# lines_number = int(input())
+phrase = "Je dois suivre en cours"
+lines_number = int(input())
 
-# for _ in range(lines_number):
-#     print(phrase)
+for _ in range(lines_number):
+    print(phrase)
 
 
 """
@@ -141,11 +141,11 @@ sortie :
 
 """
 
-# min_temp = int(input())
-# max_temp = int(input())
+min_temp = int(input())
+max_temp = int(input())
 
-# for temperature in range(min_temp, max_temp + 1):
-#     print(temperature)
+for temperature in range(min_temp, max_temp + 1):
+    print(temperature)
     
 
 
@@ -188,14 +188,14 @@ Les valeurs du premier exemple correspondent aux calculs suivants :
 
 """
 
-# number_of_inputs = int(input())
-# depart_number = 66
+number_of_inputs = int(input())
+depart_number = 66
 
-# result = depart_number
+result = depart_number
 
-# for i in range(1, number_of_inputs + 1):
-#     result *= i
-#     print(result)
+for i in range(1, number_of_inputs + 1):
+    result *= i
+    print(result)
 
 
 """"
@@ -246,27 +246,27 @@ sortie :
 
 """
 
-# depart_position = int(input())
-# slot_width = int(input())
-# number_of_sellers = int(input())
+depart_position = int(input())
+slot_width = int(input())
+number_of_sellers = int(input())
 
-# position = depart_position
+position = depart_position
 
-# print(position)
+print(position)
 
-# for _ in range(number_of_sellers):
-#   position += slot_width
-#   print(position)
+for _ in range(number_of_sellers):
+  position += slot_width
+  print(position)
 
-# Other way to do it
+#Other way to do it
 
-# depart_position = int(input())
-# slot_width = int(input())
-# number_of_sellers = int(input())
+depart_position = int(input())
+slot_width = int(input())
+number_of_sellers = int(input())
 
-# for i in range(number_of_sellers +1):
-#   position = depart_position + i * slot_width
-#   print(position)
+for i in range(number_of_sellers +1):
+  position = depart_position + i * slot_width
+  print(position)
 
 
 """
@@ -338,16 +338,16 @@ sortie :
 
 """
 
-# farmers_number = 20
-# karvas_farmers_list = []
+farmers_number = 20
+karvas_farmers_list = []
 
-# for _ in range(farmers_number):
-#   karvas_per_farmer = int(input())
-#   karvas_farmers_list.append(karvas_per_farmer)
+for _ in range(farmers_number):
+  karvas_per_farmer = int(input())
+  karvas_farmers_list.append(karvas_per_farmer)
 
-# total_karvas = sum(karvas_farmers_list)
+total_karvas = sum(karvas_farmers_list)
 
-# print(total_karvas)
+print(total_karvas)
 
 """"
 Les habitants d'Algoréa aiment bien ériger des statues et les poser sur des socles majestueux. 
@@ -379,15 +379,15 @@ Le volume total est donc : 7 × 7 + 6 × 6 + 5 × 5 + 4 × 4 + 3 × 3 = 135.
 
 """
 
-# base_floor_width = int(input())
-# base_top_face_width = int(input())
+base_floor_width = int(input())
+base_top_face_width = int(input())
 
-# total_volume = 0
+total_volume = 0
 
-# for i in range(base_top_face_width, base_floor_width + 1):
-#   total_volume += (i ** 2)
+for i in range(base_top_face_width, base_floor_width + 1):
+  total_volume += (i ** 2)
 
-# print(total_volume)
+print(total_volume)
 
 
 """"
