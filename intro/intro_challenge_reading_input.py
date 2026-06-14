@@ -246,24 +246,191 @@ sortie :
 
 """
 
-depart_position = int(input())
-slot_width = int(input())
-number_of_sellers = int(input())
+# depart_position = int(input())
+# slot_width = int(input())
+# number_of_sellers = int(input())
 
-position = depart_position
+# position = depart_position
 
-print(position)
+# print(position)
 
-for _ in range(number_of_sellers):
-  position += slot_width
-  print(position)
+# for _ in range(number_of_sellers):
+#   position += slot_width
+#   print(position)
 
 # Other way to do it
 
-depart_position = int(input())
-slot_width = int(input())
-number_of_sellers = int(input())
+# depart_position = int(input())
+# slot_width = int(input())
+# number_of_sellers = int(input())
 
-for i in range(number_of_sellers +1):
-  position = depart_position + i * slot_width
-  print(position)
+# for i in range(number_of_sellers +1):
+#   position = depart_position + i * slot_width
+#   print(position)
+
+
+"""
+Le village compte 20 fermiers, et chaque fermier élève un certain nombre de Karvas (des ruminants qui ressemblent beaucoup à nos vaches terriennes). 
+Pour s'assurer qu'il n'y a pas de risque de famine en cas de mauvaise récolte, les habitants veulent régulièrement calculer le nombre total de Karvas du village. 
+Cependant, pour une raison qui vous échappe, les fermiers gardent jalousement secret le nombre de bêtes qu'ils possèdent.
+
+Vous proposez alors la solution suivante : les fermiers viendront chacun leur tour donner à votre robot le nombre de Karvas qu'ils possèdent. 
+Votre robot pourra alors afficher le nombre total de Karvas du village, puis effacer les informations secrètes qui lui auront été fournies.
+
+Ce que doit faire votre programme :
+Votre programme doit lire 20 entiers puis afficher la somme de tous ces entiers.
+
+Exemples
+Exemple 1
+entrée :
+
+entrée :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+sortie :
+
+110
+Exemple 2
+entrée :
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+sortie :
+
+30
+
+"""
+
+# farmers_number = 20
+# karvas_farmers_list = []
+
+# for _ in range(farmers_number):
+#   karvas_per_farmer = int(input())
+#   karvas_farmers_list.append(karvas_per_farmer)
+
+# total_karvas = sum(karvas_farmers_list)
+
+# print(total_karvas)
+
+""""
+Les habitants d'Algoréa aiment bien ériger des statues et les poser sur des socles majestueux. 
+Selon les dimensions de la statue, le socle doit être plus ou moins haut et offrir une surface plus ou moins grande pour y poser la statue. 
+Cependant, les constructeurs de statues ont souvent du mal à estimer la quantité de béton nécessaire à la construction de chaque socle. 
+Vous souhaitez écrire un programme pour les aider.
+
+Ce que doit faire votre programme :
+Voici un exemple de socle :
+
+Pyramide formée de 3 marches carrées de tailles décroissantes
+Un socle est ainsi constitué d'étages, chaque étage ayant une hauteur égale à une unité et une base carrée. 
+Le côté des carrés diminue de une unité à chaque étage.
+
+Votre programme doit lire deux entiers, représentant respectivement la largeur du socle au niveau du sol et la largeur du socle au niveau de la face supérieure du socle. 
+Il doit ensuite calculer et afficher le volume du socle.
+
+Exemple
+entrée :
+
+7
+3
+sortie :
+
+135
+Commentaires
+Le volume du premier étage est 7 × 7 = 49, le volume du second est 6 × 6 = 36, etc. et le volume du dernier étage est 3 × 3 = 9. 
+Le volume total est donc : 7 × 7 + 6 × 6 + 5 × 5 + 4 × 4 + 3 × 3 = 135.
+
+"""
+
+# base_floor_width = int(input())
+# base_top_face_width = int(input())
+
+# total_volume = 0
+
+# for i in range(base_top_face_width, base_floor_width + 1):
+#   total_volume += (i ** 2)
+
+# print(total_volume)
+
+
+""""
+Lors du concours général agricole, l'épreuve reine, celle que tout fermier rêve de remporter, est celle du plus beau Karva (l'équivalent de notre taureau). La compétition est basée sur des règles strictes : chaque animal reçoit une note en fonction de ses caractéristiques et celui qui a reçu la plus grande note est déclaré champion. Vous souhaiteriez connaître les résultats avant tout le monde ; aussi, vous décidez d'écrire un programme qui vous donnera la note de chacun des Karvas en compétition.
+
+Ce que doit faire votre programme :
+Votre programme doit d'abord lire le nombre de Karvas en compétition. Ensuite, pour chaque Karva, il doit :
+
+lire 4 entiers : son poids, son âge, la longueur de ses cornes et la hauteur au garrot ;
+afficher sa note, sachant qu'elle s'obtient en multipliant la longueur des cornes par la hauteur au garrot, valeur à laquelle on ajoute le poids.
+Exemple
+entrée :
+
+2
+100
+5
+25
+90
+300
+10
+15
+120
+sortie :
+
+2350
+2100
+
+"""
+
+
+karva_number = int(input())
+karva_scores = []
+
+for karva in range(karva_number):
+  weight_karva = int(input())
+  age_karva = int(input())
+  horns_length_karva = int(input())
+  garot_height_karva = int(input())
+  karva_score = horns_length_karva * garot_height_karva + weight_karva
+  karva_scores.append(karva_score)
+
+for score in karva_scores:
+  print(score)
+
+
+
