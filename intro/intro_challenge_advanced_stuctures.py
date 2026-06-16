@@ -4,13 +4,13 @@ Ce programme lit un entier nommé cible. Si cible est un nombre positif, le prog
 Sinon, le programme affiche le texte « Rien à faire ».
 """
 
-# target = int(input())
+target = int(input())
 
-# if target >= 0:
-#   for number in range(target + 1):
-#     print(number)
-# else:
-#   print("Rien à faire")
+if target >= 0:
+  for number in range(target + 1):
+    print(number)
+else:
+  print("Rien à faire")
 
 
 """
@@ -41,15 +41,15 @@ sortie :
 
 """
 
-# places_number = int(input())
-# number_of_cities = 0
+places_number = int(input())
+number_of_cities = 0
 
-# for place in range(places_number):
-#   population = int(input())
-#   if population > 10000:
-#     number_of_cities += 1
+for place in range(places_number):
+  population = int(input())
+  if population > 10000:
+    number_of_cities += 1
 
-# print(number_of_cities) 
+print(number_of_cities) 
 
 
 """
@@ -81,16 +81,16 @@ Les deux autres villages sont trop lointains.
 
 """
 
-# current_position = int(input())
-# villages_number = int(input())
-# nearby_villages_count = 0
+current_position = int(input())
+villages_number = int(input())
+nearby_villages_count = 0
 
-# for village in range(villages_number):
-#   village_position = int(input())
-#   if current_position -50 <= village_position <= current_position + 50:
-#     nearby_villages_count += 1
+for village in range(villages_number):
+  village_position = int(input())
+  if current_position -50 <= village_position <= current_position + 50:
+    nearby_villages_count += 1
 
-# print (nearby_villages_count)
+print (nearby_villages_count)
  
 
 """
@@ -119,28 +119,28 @@ sortie :
 
 """
 
-# days_number = int(input())
-# distances = []
+days_number = int(input())
+distances = []
 
-# for _ in range(days_number):
-#   distance_day = int(input())
-#   distances.append(distance_day)
+for _ in range(days_number):
+  distance_day = int(input())
+  distances.append(distance_day)
 
-# max_distance = max(distances)
+max_distance = max(distances)
 
-# print(max_distance)
+print(max_distance)
 
 # other way to do it:
 
-# days_number = int(input())
-# max_distance = 0
+days_number = int(input())
+max_distance = 0
 
-# for _ in range(days_number):
-#   distance_day = int(input())
-#   if distance_day > max_distance:
-#     max_distance = distance_day
+for _ in range(days_number):
+  distance_day = int(input())
+  if distance_day > max_distance:
+    max_distance = distance_day
 
-# print(max_distance)
+print(max_distance)
 
 """
 
@@ -172,19 +172,19 @@ sortie :
 
 """
 
-# number_of_slopes = int(input())
-# total_ascents = 0
-# total_descents = 0
+number_of_slopes = int(input())
+total_ascents = 0
+total_descents = 0
 
-# for _ in range(number_of_slopes):
-#   slopes = int(input())
-#   if slopes < 0:
-#     total_descents += abs(slopes)
-#   else:
-#     total_ascents += slopes
+for _ in range(number_of_slopes):
+  slopes = int(input())
+  if slopes < 0:
+    total_descents += abs(slopes)
+  else:
+    total_ascents += slopes
 
-# print(total_ascents)
-# print(total_descents)
+print(total_ascents)
+print(total_descents)
 
 """"
 Alors que vous traversez une forêt vous ne pouvez vous empêcher d'admirer la végétation autour de vous et notamment les nombreuses espèces d'arbres. 
@@ -222,19 +222,19 @@ Tinuviel
 
 """
 
-# height = int(input())
-# leaflets = int(input())
+height = int(input())
+leaflets = int(input())
 
-# if height <= 5 and leaflets >= 8:
-#   print("Tinuviel")
-# elif height <= 8 and leaflets <= 5:
-#   print("Falarion")
-# elif height >= 10 and leaflets >= 10:
-#   print("Calaelen")
-# elif height >= 12 and leaflets <= 7:
-#   print("Dorthonion")
-# else:
-#   print("Espèce inconnue")
+if height <= 5 and leaflets >= 8:
+  print("Tinuviel")
+elif height <= 8 and leaflets <= 5:
+  print("Falarion")
+elif height >= 10 and leaflets >= 10:
+  print("Calaelen")
+elif height >= 12 and leaflets <= 7:
+  print("Dorthonion")
+else:
+  print("Espèce inconnue")
 
 
 """"
@@ -259,20 +259,20 @@ sortie :
 
 """
 
-# age = int(input())
-# luggage_weight = int(input())
-# bedroom_price = 0
+age = int(input())
+luggage_weight = int(input())
+bedroom_price = 0
 
-# if age == 60:
-#   bedroom_price += 0
-# elif age < 10:
-#   bedroom_price += 5
-# else: 
-#   bedroom_price += 30
-#   if luggage_weight >= 20:
-#     bedroom_price += 10
+if age == 60:
+  bedroom_price += 0
+elif age < 10:
+  bedroom_price += 5
+else: 
+  bedroom_price += 30
+  if luggage_weight >= 20:
+    bedroom_price += 10
 
-# print(bedroom_price)
+print(bedroom_price)
 
 
 """"
@@ -294,19 +294,19 @@ Ce rectangle doit avoir ses côtés parallèles aux axes du repère, comme montr
 
 """
 
-# houses_number = int(input())
-# x_list = []
-# y_list = []
+houses_number = int(input())
+x_list = []
+y_list = []
 
-# for house in range(houses_number):
-#   axis_x = int(input())
-#   x_list.append(axis_x)
-#   axis_y = int(input())
-#   y_list.append(axis_y)
+for house in range(houses_number):
+  axis_x = int(input())
+  x_list.append(axis_x)
+  axis_y = int(input())
+  y_list.append(axis_y)
   
-# area = ((max(x_list) - min(x_list)) + (max(y_list) - min(y_list))) * 2
+area = ((max(x_list) - min(x_list)) + (max(y_list) - min(y_list))) * 2
 
-# print(area)
+print(area)
 
 
 """"
@@ -340,17 +340,17 @@ Il est à égalité avec le 3e marchand, mais on préfère le 5e qui est le plus
 
 """
 
-# merchants_number = int(input())
-# galettes_prices = []
-# best_merchant = 1
+merchants_number = int(input())
+galettes_prices = []
+best_merchant = 1
 
-# for merchant in range (merchants_number):
-#   galette_price = int(input())
-#   galettes_prices.append(galette_price)
-#   if galette_price < min(galettes_prices):
-#     best_merchant = galettes_prices[best_merchant]
+for merchant in range (merchants_number):
+  galette_price = int(input())
+  galettes_prices.append(galette_price)
+  if galette_price < min(galettes_prices):
+    best_merchant = galettes_prices[best_merchant]
 
-# min_galette_price = min(galettes_prices)
+min_galette_price = min(galettes_prices)
 
 
 merchants_number = int(input())
