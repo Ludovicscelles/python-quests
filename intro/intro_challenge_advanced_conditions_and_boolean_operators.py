@@ -69,21 +69,21 @@ Si une maison est exactement sur le bord de la zone, elle doit ête comptée.
 
 """
 
-# min_axis_x = int(input())
-# max_axis_x = int(input())
-# min_axis_y = int(input())
-# max_axis_y = int(input())
-# houses_in_the_zone = 0
+min_axis_x = int(input())
+max_axis_x = int(input())
+min_axis_y = int(input())
+max_axis_y = int(input())
+houses_in_the_zone = 0
 
-# houses_number = int(input())
+houses_number = int(input())
 
-# for house in range(houses_number):
-#   axis_x = int(input())
-#   axis_y = int(input())
-#   if min_axis_x <= axis_x <= max_axis_x and min_axis_y <= axis_y <= max_axis_y:
-#     houses_in_the_zone += 1
+for house in range(houses_number):
+  axis_x = int(input())
+  axis_y = int(input())
+  if min_axis_x <= axis_x <= max_axis_x and min_axis_y <= axis_y <= max_axis_y:
+    houses_in_the_zone += 1
 
-# print(houses_in_the_zone)
+print(houses_in_the_zone)
 
 """
 
@@ -116,14 +116,14 @@ sortie :
 
 """
 
-# month_number = int(input())
+month_number = int(input())
 
-# if month_number == 11:
-#   print(29)
-# elif 4 <= month_number <= 6 or month_number == 10:
-#   print(31)
-# else:
-#   print(30)
+if month_number == 11:
+  print(29)
+elif 4 <= month_number <= 6 or month_number == 10:
+  print(31)
+else:
+  print(30)
 
 """
 Amitié entre gardes
@@ -172,15 +172,15 @@ Amis
 
 """
 
-# soldier_1_start_date = int(input())
-# soldier_1_end_date = int(input())
-# soldier_2_start_date = int(input())
-# soldier_2_end_date = int(input())
+soldier_1_start_date = int(input())
+soldier_1_end_date = int(input())
+soldier_2_start_date = int(input())
+soldier_2_end_date = int(input())
 
-# if soldier_2_end_date < soldier_1_start_date or soldier_1_end_date < soldier_2_start_date:
-#   print("Pas Amis")
-# else:
-#   print("Amis")
+if soldier_2_end_date < soldier_1_start_date or soldier_1_end_date < soldier_2_start_date:
+  print("Pas Amis")
+else:
+  print("Amis")
 
 """
 Le gouverneur a organisé une petite fête à laquelle tous les notables étaient invités. Il souhaiterait à présent faire réaliser une petite affiche vantant le succès de la fête et indiquant en particulier le nombre de personnes présentes au moment le plus intense de la fête.
@@ -240,6 +240,270 @@ for guest in range (2 * guests_number):
       max_guests_presents = guests_presents
 
 print(max_guests_presents)
+
+
+"""
+Casernes de pompiers
+
+La ville comprend de nombreuses casernes de pompiers et chacune a sa propre zone d'intervention qui lui est réservée. 
+Cependant en regardant ces zones il vous semble qu'elles ne sont pas très bien choisies car parfois elles se recoupent alors que certains endroits de la ville sont en dehors de toutes les zones et donc ne sont pas protégées par les pompiers. 
+Vous décidez d'aider le maire à mieux organiser l'action des pompiers.
+
+Ce que doit faire votre programme :
+Votre programme doit lire la description de plusieurs paires de zones rectangulaires, et pour chaque paire, déterminer si les deux zones s'intersectent.
+
+Vous devez lire un premier entier, le nombre de paires de zones que votre programme devra tester. 
+Ensuite, pour chaque paire possible, deux zones rectangulaires et parallèles aux axes vous sont données l'une après l'autre. 
+Chaque zone est décrite par 4 entiers : son abscisse minimale et maximale puis son ordonnée minimale et maximale.
+
+Sur cet exemple, la zone du bas est donc décrite par les 4 entiers (1, 6, 1, 5) et l'autre par (4, 9, 3, 8) :
+
+"""
+number_of_pairs = int(input())
+
+for pair in range(number_of_pairs):
+  min_x_zone_1 = int(input())
+  max_x_zone_1 = int(input())
+  min_y_zone_1 = int(input())
+  max_y_zone_1 = int(input())
+  min_x_zone_2 = int(input())
+  max_x_zone_2 = int(input())
+  min_y_zone_2 = int(input())
+  max_y_zone_2 = int(input())
+
+  if (max_x_zone_1 <= min_x_zone_2 or max_x_zone_2 <= min_x_zone_1) or (max_y_zone_1 <= min_y_zone_2 or max_y_zone_2 <= min_y_zone_1):
+    print("NON")
+  else:
+    print("OUI")
+
+"""
+Personne disparue
+
+Un personnage important de la cité n'est pas rentré chez lui hier soir et tout le monde est à sa recherche. 
+Or tout habitant de la ville a un numéro unique qui lui est associé et doit signer une sorte de registre quand il sort de la ville. 
+Vous souhaitez savoir si le registre a été signé, auquel cas il faudra étendre les recherches à l'extérieur de la ville.
+
+Ce que doit faire votre programme :
+On vous donne un entier, le numéro d'une personne recherchée, puis un entier tailleListe, et enfin tailleListe entiers parmi lesquels vous devez chercher le numéro de la personne. 
+Si le numéro est présent dans la liste (il peut l'être plusieurs fois) vous devez afficher le texte "Sorti de la ville" sinon "Encore dans la ville".
+
+Exemple
+entrée :
+
+42
+5
+1
+7
+172
+2
+41
+sortie :
+
+Encore dans la ville
+
+
+"""
+
+wanted_person = int(input())
+number_of_people_outside = int(input())
+
+is_out = False
+
+for people in range(number_of_people_outside):
+  identity_number = int(input())
+  if identity_number == wanted_person:
+    is_out = True
+
+if is_out:
+  print("Sorti de la ville")
+else:
+  print("Encore dans la ville")
+
+
+"""
+La grande fête
+
+Un espion était présent à la grande fête organisée la semaine dernière par le gouverneur. 
+Bien qu'on n'ait pas pu l'identifier, on a réussi à intercepter son rapport et à estimer en fonction de ce qu'il a pu voir, à quelle période il a été présent. 
+Sachant pour chaque invité sa date d'arrivée et de départ, on aimerait interroger tous les suspects potentiels. 
+Vous souhaitez savoir combien de suspects il faudra interroger.
+
+Ce que doit faire votre programme :
+On vous donne une période de temps à étudier, et les dates d'arrivée et de départ d'un certain nombre d'invités d'une fête. 
+Écrivez un programme qui détermine combien d'invités ont été présents à un moment de la période étudiée.
+
+Votre programme doit d'abord lire deux entiers : la date de début et la date de fin de la période étudiée. L'entier suivant, nbInvites, est le nombre total d'invités. 
+Pour chaque invité, votre programme doit ensuite lire deux entiers : sa date d'arrivée et de départ. 
+Un invité est suspect si la période à laquelle il a été présent intersecte la période étudiée. 
+Votre programme doit afficher le nombre d'invités suspects.
+
+Exemple
+entrée :
+
+8
+12
+5
+4
+7
+2
+11
+3
+6
+1
+8
+14
+19
+sortie :
+
+2
+
+
+"""
+
+start_date = int(input())
+end_date = int(input())
+total_guests = int(input())
+number_of_suspects = 0
+
+for guest in range(total_guests):
+  start_date_guest = int(input())
+  end_date_guest = int(input())
+
+  if start_date_guest <= end_date and end_date_guest >= start_date :
+    number_of_suspects += 1
+
+print(number_of_suspects)
+
+"""
+L'espion est démasqué !
+
+Grâce à un certain nombre d'informateurs plus ou moins fiables, le chef de la police a recueilli des indications qui devraient lui permettre enfin de démasquer cet espion qui lui échappe depuis des semaines. 
+La population de la ville étant relativement importante, il vous demande votre aide afin d'automatiser un peu les choses. 
+Vous devez estimer la probabilité qu'une personne soit un espion.
+
+Ce que doit faire votre programme :
+Votre programme doit lire entier : un nombre de personnes à considérer. Ensuite, pour chaque personne, il doit lire son signalement sous la forme de cinq entiers : sa taille en centimètres, son âge en années, son poids en kilogrammes, un entier valant 1 si la personne possède un cheval et 0 sinon, et un entier valant 1 si la personne à les cheveux bruns et 0 sinon.
+
+On veut déterminer pour chaque personne à quel point elle correspond aux 5 critères suivants :
+
+il aurait une taille supérieure ou égale à 178 cm et inférieure ou égale à 182 cm ;
+il aurait au moins 34 ans ;
+il pèserait strictement moins de 70 kg ;
+il n'a pas de cheval ;
+il a les cheveux bruns.
+Lorsque cela n'est pas précisé explicitement, les inégalités sont au sens large.
+
+Pour chaque personne, vous devez tester tous les critères. S'ils sont vérifiés tous les 5, vous devez afficher « Très probable ». 
+Si seulement 3 ou 4 sont vérifiés, vous devez afficher « Probable ». 
+Si aucun n'est vérifié, vous devez afficher « Impossible », et dans les autres cas, vous devez afficher « Peu probable ».
+
+Exemple
+entrée :
+
+1
+180
+40
+65
+0
+1
+sortie :
+
+Très probable
+
+"""
+
+number_of_suspects = int(input())
+
+for suspect in range(number_of_suspects):
+  height = int(input())
+  age = int(input())
+  weight = int(input())
+  has_horse = int(input())
+  brown_hair = int(input())
+  criteria = 0
+
+  if 178 <= height <= 182:
+    criteria += 1
+  if age >= 34:
+    criteria += 1
+  if weight < 70:
+    criteria += 1
+  if not has_horse:
+    criteria += 1
+  if brown_hair:
+    criteria += 1
+
+  if criteria == 5:
+    print("Très probable")
+  elif criteria == 3 or criteria == 4:
+    print("Probable")
+  elif criteria == 0:
+    print("Impossible")
+  else:
+    print("Peu probable")
+
+
+"""
+Zones de couleurs
+
+Un espion a été démasqué dans la ville où vous vous trouvez. Son interrogatoire n'a pas été très fructueux : la seule chose que vous savez, c'est qu'il espionnait les savants de l'université, une puissance étrangère étant intéressée par leurs recherches. 
+Vous vous rendez donc à l'université pour discuter avec les chercheurs mais à peine arrivé, vous êtes recruté comme assistant par le laboratoire d'étude du comportement humain.
+
+Celui-ci réalise une expérience consistant à demander à plusieurs personnes de placer chacune un jeton sur une table contenant des zones de différentes couleurs. 
+Les chercheurs souhaitent ainsi étudier si le choix de la zone où une personne place son jeton est lié à la couleur des vêtements qu'elle porte.
+
+Ce que doit faire votre programme :
+Sur une table est placée une feuille de papier rectangulaire de 90 cm de large et 70 cm de haut, composée de zones de différentes couleurs, comme le décrit la figure ci-dessous. 
+Un certain nombre de personnes placent l'une après l'autre un jeton où elles le souhaitent sur la table, à l'exception des frontières entre les différentes zones.
+
+On vous donne en entrée le nombre de jetons qui ont été déposés, puis, pour chaque jeton, ses coordonnées sur la feuille par rapport à l'origine en haut à gauche, sous la forme d'une abscisse et d'une ordonnée entre −1 000 et 1 000.
+
+Votre programme devra qualifier chaque jeton avec l'un des textes suivants, en fonction de la couleur sur laquelle il se trouve :
+
+« En dehors de la feuille »
+« Dans une zone jaune »
+« Dans une zone bleue »
+« Dans une zone rouge »
+Essayez d'écrire votre programme de sorte qu'il y ait au maximum une condition par possibilité de texte affiché.
+
+Exemple
+entrée :
+
+4
+16
+12
+30
+22
+64
+62
+-5
+86
+sortie :
+
+Dans une zone bleue
+Dans une zone jaune
+Dans une zone rouge
+En dehors de la feuille
+Commentaires
+Dans l'exemple, on a 4 jetons, de coordonnées (16 ; 12), (30 ; 22), (64 ; 62) et (-5 ; 86).
+
+"""
+number_of_tokens = int(input())
+
+for token in range(number_of_tokens):
+  axis_x = int(input())
+  axis_y = int(input())
+
+  if axis_x < 0 or axis_x > 90 or axis_y < 0 or axis_y > 70:
+    print("En dehors de la feuille")
+  elif ((15 <= axis_x <= 45 or 60 <= axis_x <= 85) and (60 <= axis_y <= 70)):
+    print("Dans une zone rouge")
+  elif ((10 <= axis_x <= 85 and 10 <= axis_y <= 55) and not (25 <= axis_x <= 50 and 20 <= axis_y <= 45)):
+    print("Dans une zone bleue")
+  else:
+    print("Dans une zone jaune")
+  
+
 
 
 
