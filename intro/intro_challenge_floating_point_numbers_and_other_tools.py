@@ -1,4 +1,6 @@
 """
+Origami
+
 Des enfants découvrent les joies de l'origami (créer des objets en pliant une feuille de papier), et l'un d'eux s'amuse à replier sur elle-même une feuille le plus de fois possible. 
 Il pense qu'il peut replier la feuille en deux 15 fois de suite !
 
@@ -23,6 +25,7 @@ for fold in range(15):
 print(final_thickness/10)
 
 """
+Conversions des distances
 
 Vous décidez de partir pour quelques jours de randonnée à la montagne. 
 Le problème est que toutes les distances indiquées sur les panneaux ne le sont pas en kilomètres mais en lieues. 
@@ -50,6 +53,8 @@ distance_in_km = distance_in_leagues * km_per_league
 print(distance_in_km)
 
 """
+
+Comparatif de prix
 
 Lors du marché hebdomadaire, de nombreux maraîchers viennent vendre de très gros légumes, en indiquant pour chacun trois informations : son poids, le nombre de jours qui se sont écoulés depuis sa cueillette, et son prix.
 
@@ -87,6 +92,9 @@ for vegatable in range(vegetables_number):
 
 
 """
+
+Moyenne de notes 
+
 Des écoliers d'une école voisine aiment bien calculer la moyenne qu'ils vont avoir sur leur bulletin de notes avant de le recevoir. 
 Cependant, ils ont beaucoup de notes, et ils aimeraient donc pouvoir utiliser un petit programme pour calculer leur moyenne sans se fatiguer.
 
@@ -217,6 +225,8 @@ print(new_population)
 
 
 """
+Construction de maisons 
+
 Pour la construction de votre nouvelle maison, vous avez calculé la quantité de ciment nécessaire pour construire les fondations. De nature économe, vous souhaitez acheter exactement la quantité nécessaire mais malheureusement le magasin ne vend le ciment qu'en gros sacs. Vous souhaitez calculer combien tout cela va vous coûter.
 
 Ce que doit faire votre programme :
@@ -292,6 +302,8 @@ print(arrondi_bancaire) # Affiche 12, car 12 est le plus proche entier.
 print(round(-1.5)); print(round(-0.5)); print(round(0.5)); print(round(1.5))
 
 """
+Soirée orageuse 
+
 Ce soir, un orage se déchaîne pas loin de chez vous et régulièrement vous voyez des éclairs puis, quelques secondes après, vous entendez le tonnerre. Vous aimeriez savoir à quelle distance se trouve l'orage, afin de savoir s'il se rapproche de vous ou, au contraire, s'éloigne.
 
 Ce que doit faire votre programme :
@@ -316,7 +328,7 @@ distance_in_km = round((time_in_s * sound_velocity) / 1000)
 print(distance_in_km)
 
 """
-
+Augmentation des taxes
 
 Pour faire face à des difficultés financières du gouvernement, la taxe sur les fruits et légumes a été augmentée. Il faut donc recalculer tous les prix afin de prendre en compte cette nouvelle taxe, que les commerçants vont bien entendu répercuter sur les clients.
 
