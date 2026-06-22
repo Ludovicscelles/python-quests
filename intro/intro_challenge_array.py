@@ -363,3 +363,215 @@ sortie :
 #     move_out = way_out[move]
 #     print(reversed_moves[move_out])
 
+"""
+Journée des cadeaux
+
+Dans la ville de Largition, la tradition veut que, une fois par mois, les habitants les plus riches fassent un cadeau aux habitants les moins riches. 
+Cela permet de maintenir une bonne ambiance malgré les inévitables différences de richesses.
+
+Un habitant est considéré comme riche si sa fortune est plus grande que celle de la moitié de la population. 
+Calculer, chaque mois, qui est riche ou pas est un long travail, aussi lorsque le maire a entendu parlé de vos talents, il vous a demandé votre aide.
+
+Ce que doit faire votre programme :
+Il devra lire un premier entier, le nombre d'habitants (au plus 1000) puis, pour chaque habitant il devra lire sa fortune, un entier. 
+Il devra calculer puis afficher une valeur permettant de dire facilement si une personne est riche ou pas, simplement en regardant si la fortune de cette personne est plus grande ou plus petite que cette valeur.
+
+Deux cas peuvent se présenter :
+
+Si le nombre d'habitants est impair, par exemple si leurs fortunes sont 10, 5, 12, 8, 3 alors la valeur recherchée est 8. 
+En effet, il y aura alors 2 personnes "riches" (10 et 12), 2 "moins riches" (3 et 5) et 1 juste au milieu (8) qui ne donnera ni recevra de cadeau.
+Si le nombre d'habitants est pair, par exemple si leurs fortunes sont 10, 5, 12, 8, 3, 9 alors la valeur recherchée est entre 8 et 9. 
+Il y a en effet 3 personnes "riches" (9, 10 et 12) et 3 "moins riches" (3, 5 et 8). Par convention on prendra la valeur 8.5, c'est-à-dire la moyenne de 8 et 9.
+
+Exemples
+Exemple 1
+entrée :
+
+5
+10
+5
+12
+8
+3
+sortie :
+
+8
+Exemple 2
+entrée :
+
+6
+10
+5
+12
+8
+3
+9
+sortie :
+
+8.5
+
+
+"""
+
+# population = int(input())
+# fortune_list = [0] * population
+
+# for people in range(population):
+#     fortune = int(input())
+#     fortune_list[people] = fortune
+
+# fortune_list.sort()
+
+# if population % 2 != 0:
+#     median_wealth = fortune_list[population // 2]
+# else:
+#     median_wealth = (fortune_list[population // 2] + fortune_list[(population // 2) - 1])/2
+
+# print(median_wealth)
+
+
+"""
+Course à trois jambes
+
+En parallèle du grand marché de la ville auquel vous accompagnez vos amis marchands, un ensemble de jeux sont organisés pour les habitants, 
+en particulier la fameuse « course à trois jambes » : cette course se déroule par équipes de deux personnes dont deux des jambes sont attachées par une corde :
+
+
+Afin de constituer les équipes au hasard, un tirage au sort est organisé. 
+Comme c'est une opération longue à faire manuellement et que vous êtes impatient, vous décidez d'aider les organisateurs avec votre robot.
+
+Ce que doit faire votre programme :
+Le premier entier à lire est le nombre de participants (au plus 3 000) qui sera toujours pair. 
+Ensuite il faut lire, pour chaque participant, un entier qu'il a choisi librement.
+
+Les équipes sont constituées ainsi : la personne ayant choisi le plus petit entier est avec celle ayant choisi le plus grand, 
+celle ayant choisi le deuxième plus petit est avec celle ayant choisi le deuxième plus grand, et ainsi de suite.
+
+Vous devrez afficher la composition de chacune des équipes, dans l'ordre : d'abord celle dont le plus petit numéro fait partie, 
+puis celle dont le second plus petit numéro fait partie, et ainsi de suite. Au sein de chaque équipe on affichera d'abord le plus petit numéro puis le plus grand.
+
+On vous garantit que tous les numéros sont différents.
+
+Exemple
+entrée :
+
+10
+80
+1000
+5
+154
+130
+847
+450
+42
+35
+789
+sortie :
+
+5 1000
+35 847
+42 789
+80 450
+130 154
+
+"""
+
+# participants = int(input())
+# numbers = [0] * participants
+
+# for participant in range(participants):
+#     number = int(input())
+#     numbers[participant] = number
+
+# increasing_numbers = sorted(numbers)[:len(numbers)//2]
+
+# decreasing_numbers = sorted(numbers, reverse=True)[:len(numbers)//2]
+
+# for number_i, number_d in zip(increasing_numbers, decreasing_numbers):
+#     print("{} {}".format(number_i, number_d))
+
+# Other way to do it:
+
+# participants = int(input())
+# numbers = [0] * participants
+
+# for participant in range(participants):
+#     number = int(input())
+#     numbers[participant] = number
+
+# numbers.sort()
+
+# for first_participant in range(participants//2):
+#     second_participant = participants - 1 - first_participant
+#     print("{} {}".format(numbers[first_participant], numbers[second_participant]) )
+
+
+"""
+Banquet municipal
+
+Vous commencez à être connu pour vos talents de programmeur, aussi lors de votre passage dans la ville d'Incerto, le maire décide de vous inviter au grand banquet qu'il organise. Le maire se charge lui-même de faire le plan de table mais il change toujours d'avis et les serveurs doivent constamment changer de place les petites affiches sur lesquelles sont indiqués les noms des personnes.
+
+Afin de l'aider, vous lui proposez d'utiliser votre robot pour déterminer la position de chaque personne après tous les changements décidés par le maire.
+
+Afin de simplifier le problème, on suppose que chaque personne est identifiée par un numéro et qu'il n'y a qu'une seule très grande table.
+
+Ce que doit faire votre programme :
+Votre programme devra lire deux entiers : le nombre total de positions sur la table (au maximum 1000) et le nombre de changements de positions. Il devra ensuite lire, pour chaque position, un entier : le numéro de la personne qui doit, actuellement, s'installer à cette position.
+
+Il faut lire ensuite les changements exprimés sous la forme de deux entiers chacun : position1 et position2. Un changement (position1, position2) signifie que les deux personnes qui étaient à ses positions doivent échanger leurs places (les positions sont indexées à partir de 0).
+
+Vous devrez afficher, pour chaque position, le numéro de la personne qui s'y trouve une fois tous les changements faits.
+
+Exemple
+entrée :
+
+5
+3
+1
+2
+3
+4
+5
+1
+2
+1
+3
+4
+0
+sortie :
+
+5
+4
+2
+3
+1
+Commentaires
+Evolution des numéros dans l'exemple :
+
+Au début : 1,2,3,4,5
+Après le changement (1, 2) : 1,3,2,4,5
+Après le changement (1, 3) : 1,4,2,3,5
+Après le changement (4, 0) : 5,4,2,3,1
+
+
+
+"""
+
+total_positions = int(input())
+total_moves = int(input())
+
+positions = [0] * total_positions
+
+for position in range(total_positions):
+    position_number = int(input())
+    positions[position] = position_number
+
+for move in range(total_moves):
+    first_guest = int(input())
+    second_guest = int(input())
+    positions[first_guest], positions[second_guest] = positions[second_guest], positions[first_guest]
+
+
+for person in positions:
+    print(person)
+
