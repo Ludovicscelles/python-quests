@@ -59,14 +59,14 @@ sortie :
 
 """
 
-# ingredients = [500, 180, 650, 25, 666, 42, 421, 1, 370, 211]
+ingredients = [500, 180, 650, 25, 666, 42, 421, 1, 370, 211]
 
-# ingredients_nb = int(input())
+ingredients_nb = int(input())
 
-# if 0 <= ingredients_nb < len(ingredients):
-#     print(ingredients[ingredients_nb])
-# else:
-#     print("Indice invalide")
+if 0 <= ingredients_nb < len(ingredients):
+    print(ingredients[ingredients_nb])
+else:
+    print("Indice invalide")
 
 
 """
@@ -100,17 +100,17 @@ sortie :
 
 """
 
-# ingredients_price_kg = [9, 5, 12, 15, 7, 42, 13, 10, 1, 20]
+ingredients_price_kg = [9, 5, 12, 15, 7, 42, 13, 10, 1, 20]
 
-# total_price = 0
+total_price = 0
 
-# for price in ingredients_price_kg:
+for price in ingredients_price_kg:
 
-#     ingredient_weight = int(input())
+    ingredient_weight = int(input())
 
-#     total_price += price * ingredient_weight
+    total_price += price * ingredient_weight
 
-# print(total_price)
+print(total_price)
 
 """"
 Grand inventaire
@@ -161,18 +161,18 @@ sortie :
 
 """
 
-# account_book = [0] * 11
+account_book = [0] * 11
 
-# number_of_operations = int(input())
+number_of_operations = int(input())
 
-# for operation in range (number_of_operations):
-#     product_number = int(input())
-#     product_quantity = int(input())
+for operation in range (number_of_operations):
+    product_number = int(input())
+    product_quantity = int(input())
 
-#     account_book[product_number] += product_quantity
+    account_book[product_number] += product_quantity
 
-# for product_number in range(1, 11):
-#     print(account_book[product_number])
+for product_number in range(1, 11):
+    print(account_book[product_number])
 
 """
 Étude de marché
@@ -217,18 +217,18 @@ sortie :
 
 """
 
-# total_products = int(input())
-# product_scores = [0] * total_products
+total_products = int(input())
+product_scores = [0] * total_products
 
-# total_people = int(input())
+total_people = int(input())
 
-# for people in range(total_people):
-#     preferred_product = int(input())
+for people in range(total_people):
+    preferred_product = int(input())
 
-#     product_scores[preferred_product] += 1
+    product_scores[preferred_product] += 1
 
-# for score in product_scores:
-#     print(score)
+for score in product_scores:
+    print(score)
 
 """
 
@@ -272,25 +272,25 @@ Dans cet exemple, on modifie toutes les charettes pour qu'elles transporte chacu
 
 """
 
-# carts_number = int(input())
-# total_weight = 0
-# cart_weights = []
+carts_number = int(input())
+total_weight = 0
+cart_weights = []
 
-# for cart in range(carts_number):
-#     cart_weight = float(input())
-#     cart_weights.append(cart_weight)
-#     total_weight += cart_weight
+for cart in range(carts_number):
+    cart_weight = float(input())
+    cart_weights.append(cart_weight)
+    total_weight += cart_weight
 
-# average_weight = total_weight / carts_number
+average_weight = total_weight / carts_number
 
-# adjustments = []
+adjustments = []
 
-# for cart_weight in cart_weights:
-#     adjustment = average_weight - cart_weight
-#     adjustments.append(adjustment)
+for cart_weight in cart_weights:
+    adjustment = average_weight - cart_weight
+    adjustments.append(adjustment)
 
-# for adjustment in adjustments:
-#     print(adjustment)
+for adjustment in adjustments:
+    print(adjustment)
 
 """
 Visite de la mine
@@ -339,29 +339,29 @@ sortie :
 #     5: 4
 # }
 
-# moves_to_go_out = []
+moves_to_go_out = []
 
-# for move in range (moves_number):
-#     move_in = int(input())
-#     moves_to_go_out.append(opposites[move_in])
+for move in range (moves_number):
+    move_in = int(input())
+    moves_to_go_out.append(opposites[move_in])
 
-# for move in reversed(moves_to_go_out):
-#     print(move)
+for move in reversed(moves_to_go_out):
+    print(move)
 
 # Other way to do it:
 
-# reversed_moves = [0, 2, 1, 3, 5, 4]
+reversed_moves = [0, 2, 1, 3, 5, 4]
 
-# moves_number = int(input())
+moves_number = int(input())
 
-# way_out = [0] * moves_number
+way_out = [0] * moves_number
 
-# for move in range(moves_number):
-#     way_out[move] = int(input())
+for move in range(moves_number):
+    way_out[move] = int(input())
 
-# for move in range(moves_number-1, -1, -1):
-#     move_out = way_out[move]
-#     print(reversed_moves[move_out])
+for move in range(moves_number-1, -1, -1):
+    move_out = way_out[move]
+    print(reversed_moves[move_out])
 
 """
 Journée des cadeaux
@@ -413,21 +413,21 @@ sortie :
 
 """
 
-# population = int(input())
-# fortune_list = [0] * population
+population = int(input())
+fortune_list = [0] * population
 
-# for people in range(population):
-#     fortune = int(input())
-#     fortune_list[people] = fortune
+for people in range(population):
+    fortune = int(input())
+    fortune_list[people] = fortune
 
-# fortune_list.sort()
+fortune_list.sort()
 
-# if population % 2 != 0:
-#     median_wealth = fortune_list[population // 2]
-# else:
-#     median_wealth = (fortune_list[population // 2] + fortune_list[(population // 2) - 1])/2
+if population % 2 != 0:
+    median_wealth = fortune_list[population // 2]
+else:
+    median_wealth = (fortune_list[population // 2] + fortune_list[(population // 2) - 1])/2
 
-# print(median_wealth)
+print(median_wealth)
 
 
 """
@@ -476,34 +476,34 @@ sortie :
 
 """
 
-# participants = int(input())
-# numbers = [0] * participants
+participants = int(input())
+numbers = [0] * participants
 
-# for participant in range(participants):
-#     number = int(input())
-#     numbers[participant] = number
+for participant in range(participants):
+    number = int(input())
+    numbers[participant] = number
 
-# increasing_numbers = sorted(numbers)[:len(numbers)//2]
+increasing_numbers = sorted(numbers)[:len(numbers)//2]
 
-# decreasing_numbers = sorted(numbers, reverse=True)[:len(numbers)//2]
+decreasing_numbers = sorted(numbers, reverse=True)[:len(numbers)//2]
 
-# for number_i, number_d in zip(increasing_numbers, decreasing_numbers):
-#     print("{} {}".format(number_i, number_d))
+for number_i, number_d in zip(increasing_numbers, decreasing_numbers):
+    print("{} {}".format(number_i, number_d))
 
 # Other way to do it:
 
-# participants = int(input())
-# numbers = [0] * participants
+participants = int(input())
+numbers = [0] * participants
 
-# for participant in range(participants):
-#     number = int(input())
-#     numbers[participant] = number
+for participant in range(participants):
+    number = int(input())
+    numbers[participant] = number
 
-# numbers.sort()
+numbers.sort()
 
-# for first_participant in range(participants//2):
-#     second_participant = participants - 1 - first_participant
-#     print("{} {}".format(numbers[first_participant], numbers[second_participant]) )
+for first_participant in range(participants//2):
+    second_participant = participants - 1 - first_participant
+    print("{} {}".format(numbers[first_participant], numbers[second_participant]) )
 
 
 """
@@ -557,23 +557,23 @@ Après le changement (4, 0) : 5,4,2,3,1
 
 """
 
-# total_positions = int(input())
-# total_moves = int(input())
+total_positions = int(input())
+total_moves = int(input())
 
-# positions = [0] * total_positions
+positions = [0] * total_positions
 
-# for position in range(total_positions):
-#     position_number = int(input())
-#     positions[position] = position_number
+for position in range(total_positions):
+    position_number = int(input())
+    positions[position] = position_number
 
-# for move in range(total_moves):
-#     first_guest = int(input())
-#     second_guest = int(input())
-#     positions[first_guest], positions[second_guest] = positions[second_guest], positions[first_guest]
+for move in range(total_moves):
+    first_guest = int(input())
+    second_guest = int(input())
+    positions[first_guest], positions[second_guest] = positions[second_guest], positions[first_guest]
 
 
-# for person in positions:
-#     print(person)
+for person in positions:
+    print(person)
 
 """
 Choix des emplacements
