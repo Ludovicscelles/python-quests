@@ -557,21 +557,78 @@ Après le changement (4, 0) : 5,4,2,3,1
 
 """
 
-total_positions = int(input())
-total_moves = int(input())
+# total_positions = int(input())
+# total_moves = int(input())
 
-positions = [0] * total_positions
+# positions = [0] * total_positions
 
-for position in range(total_positions):
-    position_number = int(input())
-    positions[position] = position_number
+# for position in range(total_positions):
+#     position_number = int(input())
+#     positions[position] = position_number
 
-for move in range(total_moves):
-    first_guest = int(input())
-    second_guest = int(input())
-    positions[first_guest], positions[second_guest] = positions[second_guest], positions[first_guest]
+# for move in range(total_moves):
+#     first_guest = int(input())
+#     second_guest = int(input())
+#     positions[first_guest], positions[second_guest] = positions[second_guest], positions[first_guest]
 
 
-for person in positions:
-    print(person)
+# for person in positions:
+#     print(person)
 
+"""
+Choix des emplacements
+
+Lorsqu'on organise un marché, certains emplacements sont beaucoup plus intéressants que d'autres. 
+Afin d'éviter les tentations de « pots de vin », la ville dans laquelle vous venez d'arriver a décidé qu'on organiserait à chaque fois un tirage au sort, chacun ayant sa chance !
+
+Chaque marchand met donc son nom dans un grand panier, et des tirages sont effectués. 
+On tire d'abord le nom du marchand qui aura le premier emplacement, puis celui qui aura le second, et ainsi de suite. 
+On décide alors d'afficher par ordre alphabétique, les noms des marchands avec le numéro de leur emplacement.
+
+Pour simplifier l'exercice, on suppose que les marchands ne mettent pas leur nom dans le panier mais simplement un numéro qui indique leur rang dans la liste des marchands.
+
+Ce que doit faire votre programme :
+Votre programme devra lire le nombre d'emplacements nbEmplacements (au maximum 1 000), puis pour chaque emplacement à partir de 0, le numéro du marchand à qui est attribué l'emplacement (entre 0 et nbEmplacements − 1).
+
+Ensuite, pour chaque marchand de 0 à nbEmplacements − 1, votre programme devra afficher le numéro de l'emplacement qui lui est attribué.
+
+Exemple
+entrée :
+
+5
+1
+4
+0
+3
+2
+sortie :
+
+2
+0
+4
+3
+1
+Commentaires
+Il y a 5 positions : la première est utilisée par le marchand 1, la seconde est utilisée par le marchand 4, la troisième le marchand 0, etc.
+
+En sortie, on donne les positions des marchands par ordre des numéros des marchands :
+
+marchand n°0 : position 2 ;
+marchand n°1 : position 0 ;
+marchand n°2 : position 4 ;
+marchand n°3 : position 3 ;
+marchand n°4 : position 1.
+
+"""
+# initialize the number of total spots and create a list to hold the sellers' positions
+total_spots = int(input())
+sellers_position = [0] * total_spots
+
+# read the seller numbers for each spot and store their positions in the list
+for i_spot in range(total_spots):
+    seller_number = int(input())
+    sellers_position[seller_number] = i_spot
+
+# print the positions of the sellers in order of their numbers
+for i_spot in sellers_position:
+    print(i_spot)
