@@ -447,29 +447,144 @@ sortie :
 """
 
 
-lines_number, words_number = map(int, input().split(" "))
+# lines_number, words_number = map(int, input().split(" "))
 
-words_length = {}
+# words_length = {}
 
-for line in range(lines_number):
+# for line in range(lines_number):
 
-  words = input().split(" ")
+#   words = input().split(" ")
 
-  for word in words:
+#   for word in words:
 
-    len_w = len(word)
+#     len_w = len(word)
 
-    if len_w in words_length:
+#     if len_w in words_length:
 
-      words_length[len_w] += 1
+#       words_length[len_w] += 1
     
-    else:
+#     else:
 
-      words_length[len_w] = 1
+#       words_length[len_w] = 1
 
-print(words_length)
+# print(words_length)
 
-for length in sorted(words_length):
-  print(f"{length} : {words_length[length]}")
+# for length in sorted(words_length):
+#   print(f"{length} : {words_length[length]}")
 
 
+# Other way to do it:
+
+# lines_number, words_number = map(int, input().split(" "))
+
+# max_word_length = 100
+
+# words_length = [0] * (max_word_length + 1)
+
+# for line in range(lines_number):
+
+#   words = input().split(" ")
+
+#   for word in words:
+
+#     len_w = len(word)
+
+#     words_length[len_w] += 1
+
+
+# for length, count in enumerate(words_length):
+#   if count > 0:
+#     print(f"{length} : {count}")
+
+
+# print(words_length)
+
+
+
+"""
+Impression d’étiquettes
+
+Les sous-sols de la bibliothèque municipale sont remplis de milliers de cartons d’archives. 
+Afin d’éviter de passer leurs journées avec la tête tournée à 90 degrés pour pouvoir lire ce qui est écrit sur ces cartons, les bibliothécaires ont adopté un système d’étiquettes où les mots sont écrits de haut en bas avec une seule lettre par ligne.
+
+Étant donné un texte écrit normalement, sur une seule ligne, vous devez afficher l’étiquette correspondante, avec un seul caractère par ligne.
+
+
+
+"""
+
+# title = input().split(" ")
+
+# for word in title:
+#   for letter in word:
+#     print(letter)
+#   print()
+
+# Other way to do it:
+
+# title = input()
+
+# for letter in title:
+#   print(letter)
+
+"""
+Écriture en miroir
+
+
+Alors que vous parcourez de très vieux livres, à la recherche d’indications sur le livre qui vous intéresse en particulier, vous tombez sur un langage que vous ne connaissez pas !
+
+À y regarder de plus près, il s’agit des mêmes mots que ceux que vous utilisez tous les jours, mais tout le texte est écrit "en miroir" : toutes les lettres sont écrites de droite à gauche.
+
+Bien que vous arriviez à déchiffrer les textes présents dans ces livres, cela vous prend beaucoup de temps et vous fatigue beaucoup. 
+
+Vous décidez d’écrire un programme pour remettre automatiquement dans l’ordre les textes.
+
+Contraintes
+Chaque ligne de texte contient moins de 1000 caractères.
+
+Entrée
+Sur la première ligne, un entier nbLignes, le nombre de lignes du texte.
+
+Les nbLignes suivantes contiennent chacune une ligne de texte qu’il faut inverser.
+
+Sortie
+Pour chaque ligne du texte original, vous devez l’afficher de manière inversée.
+
+Exemple
+entrée :
+
+2
+tniop a ritrap tuaf li riruoc ed tres en neiR
+egangiomet nu tnos ne eutroT al te erveiL eL
+sortie :
+
+Rien ne sert de courir il faut partir a point
+Le Lievre et la Tortue en sont un temoignage
+
+
+"""
+
+# lines_number = int(input())
+
+# for line_id in range(lines_number):
+#   string = input()
+
+#   reversed_string = ""
+#   index = len(string)
+
+#   while index:
+#     index -= 1
+#     reversed_string += string[index]
+
+#   print(reversed_string)
+
+# Other way to do it:
+
+lines_number = int(input())
+
+for line_id in range(lines_number):
+  string = input()
+  length = len(string)
+  for character_id in range(length):
+    print(string[length - 1 - character_id], end = "")
+  print()
