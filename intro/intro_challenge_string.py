@@ -580,11 +580,135 @@ Le Lievre et la Tortue en sont un temoignage
 
 # Other way to do it:
 
-lines_number = int(input())
+# lines_number = int(input())
 
-for line_id in range(lines_number):
-  string = input()
-  length = len(string)
-  for character_id in range(length):
-    print(string[length - 1 - character_id], end = "")
-  print()
+# for line_id in range(lines_number):
+#   string = input()
+#   length = len(string)
+#   for character_id in range(length):
+#     print(string[length - 1 - character_id], end = "")
+#   print()
+
+  # Comparer deux caractères
+
+# Pour comparer deux caractères, on peut utiliser les opérateurs de comparaison (<, >, <=, >=, ==, !=). 
+# Ces opérateurs comparent les caractères en fonction de leur code ASCII.
+
+# Exemple :
+
+name = "Ludovic"
+
+if name[0] < name[4]:
+    print(f"Le caractere '{name[0]}' est avant le caractere '{name[4]}' dans l'ordre ASCII")
+elif name[0] > name[5]:
+    print(f"Le caractere '{name[0]}' est apres le caractere '{name[4]}' dans l'ordre ASCII")
+else:
+    print(f"Le caractere '{name[0]}' est egal au caractere '{name[4]}' dans l'ordre ASCII")
+
+# Il est aussi possible un caractère d'une chaîne à un caractère directement dans le code, par exemple :
+
+family_name = "Di Feliciantonio"
+
+if family_name[0] == "D":
+    print(f"Le nom de famille commence par la lettre D")
+if family_name[3] <= "M":
+    print(f"La quatrième lettre du nom de famille est avant ou égale à la lettre M de l'alphabet")
+if family_name[2] == " ":
+    print(f"La troisième lettre du nom de famille est un espace")
+
+"""
+Inscription d’étudiants
+
+Comme chaque année, lors de la rentrée universitaire, de nombreux étudiants viennent s’inscrire à la bibliothèque et une longue file d’attente se forme. 
+Afin d’essayer d'accélérer les choses, les fiches d’inscription de tous les étudiants ont déjà été préparées et ils n’ont plus qu’à les récupérer.
+
+Trois personnes sont en charge de distribuer les fiches : la première s’occupe des étudiants dont le nom commence par une lettre comprise entre A et F (inclus), 
+la seconde personne des étudiants dont le nom commence par une lettre comprise entre G et P (inclus) et la troisième du reste des étudiants.
+
+Quand un nouvel étudiant arrive, il donne son nom et il faut lui indiquer quelle personne il doit aller voir.
+
+Contraintes
+Les noms des étudiants font moins de 50 caractères de long et commencent par une lettre majuscule.
+
+Entrée
+Un nom d’étudiant.
+
+Sortie
+Un entier, 1, 2 ou 3, selon que l’étudiant doit aller voir la première, la seconde ou la troisième personne.
+
+Exemples
+Exemple 1
+entrée :
+
+Donald
+sortie :
+
+1
+Exemple 2
+entrée :
+
+Picsou
+sortie :
+
+2
+
+"""
+
+# name = input()
+# first_letter = name[0]
+
+# if first_letter <= "F":
+#     print(1)
+# elif first_letter <= "P":
+#     print(2)
+# else:
+#     print(3)
+
+"""
+ngms sns vlls
+
+Les personnes travaillant à la bibliothèque aiment particulièrement se poser des petites énigmes, d’inspiration littéraires. 
+Cette fois-ci, Agrarelle a décidé de créer des énigmes basées sur des titres de livres : elle va supprimer l’ensemble des voyelles (et les espaces) d’un titre et du nom de son auteur et ses collègues devront retrouver le titre original (ainsi que le nom de l’auteur).
+
+Contraintes
+Le titre et le nom de l’auteur font chacun moins de 100 caractères.
+
+Ils ne contiennent que des lettres majuscules et des espaces.
+
+Entrée
+Sur la première ligne, le titre du livre.
+
+Sur la seconde ligne, le nom de l’auteur.
+
+Sortie
+Sur la première ligne, le titre du livre, sans aucune voyelle, ni espace.
+
+Sur la seconde ligne, le nom de l’auteur, sans aucune voyelle, ni espace.
+
+Exemple
+entrée :
+
+AUTANT EN EMPORTE LE VENT
+MARGARET MITCHELL
+sortie :
+
+TNTNMPRTLVNT
+MRGRTMTCHLL
+
+
+"""
+
+title = input()
+author = input()
+
+vowels = "AEIOUY"
+
+for character in title:
+    if character not in vowels and character != " ":
+      print(character, end= "")
+
+print()
+
+for character in author:
+    if character not in vowels and character != " ":
+      print(character, end= "")
