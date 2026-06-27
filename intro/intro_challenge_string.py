@@ -698,17 +698,229 @@ MRGRTMTCHLL
 
 """
 
-title = input()
-author = input()
+# title = input()
+# author = input()
 
-vowels = "AEIOUY"
+# vowels = "AEIOUY"
 
-for character in title:
-    if character not in vowels and character != " ":
-      print(character, end= "")
+# for character in title:
+#     if character not in vowels and character != " ":
+#       print(character, end= "")
 
-print()
+# print()
 
-for character in author:
-    if character not in vowels and character != " ":
-      print(character, end= "")
+# for character in author:
+#     if character not in vowels and character != " ":
+#       print(character, end= "")
+
+
+# title = input()
+# author = input()
+
+# vowels_and_space = "AEIOUY "
+
+# title_to_guess = "".join(c for c in title if c not in vowels_and_space)
+# author_to_guess = "".join(c for c in author if c not in vowels_and_space)
+
+# print(title_to_guess)
+# print(author_to_guess)
+
+
+"""
+La bataille
+
+Vous avez sûrement déjà joué, étant enfant, au jeu de cartes appelé la « bataille ». 
+Les enfants algoréens aiment aussi beaucoup jouer à une variante bien plus simple de ce jeu, et vous devez faire l’arbitre des parties. 
+Comme il y a beaucoup d’enfants souhaitant jouer en même temps et que vous ne pouvez pas tout surveiller, vous décidez d’écrire un programme informatique pour déterminer le vainqueur de chaque partie.
+
+Une partie se déroule ainsi :
+
+On part d’un jeu contenant 52 cartes, chaque carte étant une lettre entre A et M, et chaque lettre étant présente 4 fois (avec différentes couleurs, mais on ne s’en occupera pas ici).
+Les cartes, face cachée, sont mélangées et séparées en deux paquets (pas forcément de même taille !).
+Les deux joueurs retournent la première carte de leur paquet : si les deux cartes sont identiques ils continuent à jouer, sinon celui qui a la carte la plus forte, c’est-à-dire la plus petite selon l’ordre alphabétique, gagne la partie.
+Si un joueur n’a plus de carte, il perd ! Et oui, ce n’est pas très juste !
+Si les deux joueurs n’ont en même temps plus de cartes, alors il y a égalité complète.
+Étant donnés les deux paquets de cartes, à vous de déterminer le gagnant.
+
+Entrée
+L'entrée contient deux lignes, correspondant respectivement aux cartes du joueur 1 et du joueur 2, dans l'ordre. Un jeu de cartes est constitué uniquement de lettre majuscules entre A et M (sans espaces).
+
+Sortie
+Sur la première ligne, il faut indiquer « 1 », « 2 » ou « = » selon que le gagnant est le premier ou le second joueur, ou bien qu’il y a égalité complète.
+
+Sur la seconde ligne, il faut indiquer le nombre d’égalités qui ont eu lieu avant que le jeu ne se termine.
+
+Exemples
+Exemple 1
+entrée :
+
+AABBDCCDEEFFGGHHIIJJKKLLMM
+AABBCCDDEEFFGGHHIIJJKKLLMM
+sortie :
+
+2
+4
+Exemple 2
+entrée :
+
+AA
+AABBCCDDEEFFGGHHIIJJKKLLMMBBDCCDEEFFGGHHIIJJKKLLMM
+sortie :
+
+2
+2
+Commentaires
+L'exemple 1 se déroule comme suit :
+
+A contre A, égalité ;
+A contre A, égalité ;
+B contre B, égalité ;
+B contre B, égalité ;
+D contre C : le C l'emporte.
+C'est donc le joueur 2 qui remporte la partie, après 4 égalités.
+
+Dans l'exemple 2, après deux égalités, le joueur 1 n'a plus de carte et donc perd la partie.
+
+
+
+"""
+
+# player_1_cards = input()
+# player_2_cards = input()
+
+# len_game_1 = len(player_1_cards)
+# len_game_2 = len(player_2_cards)
+
+# equality_count = 0
+
+# for i in range(min(len_game_1, len_game_2)):
+
+#     card_p1 = player_1_cards[i]
+#     card_p2 = player_2_cards[i]
+
+#     if card_p1 < card_p2:
+#         print(1)
+#         break
+#     elif card_p1 > card_p2:
+#         print(2)
+#         break
+#     else:
+#         equality_count += 1
+#         continue
+        
+# else:
+#     if len_game_1 < len_game_2:
+#         print(2)
+#     elif len_game_1 > len_game_2:
+#         print(1)
+#     else:
+#         print("=")
+
+
+# print(equality_count) 
+
+# other way to do it: 
+
+# player_1_cards = input()
+# player_2_cards = input()
+# round = 0
+
+# len_game_1 = len(player_1_cards)
+# len_game_2 = len(player_2_cards)
+
+# while round < len_game_1 and round < len_game_2 and player_1_cards[round] == player_2_cards[round]:
+#     round = round + 1
+# if round == len_game_1 and round == len_game_2:
+#     print("=")
+# elif round == len_game_2 or (round < len_game_1 and player_1_cards[round] < player_2_cards[round]):
+#     print(1)
+# else:
+#     print(2)
+# print(round)
+
+# Other way to do it:
+
+# player_1_cards = input()
+# player_2_cards = input()
+
+# len_game_1 = len(player_1_cards)
+# len_game_2 = len(player_2_cards)
+
+# equal_round = 0
+
+# for card_p1, card_p2 in zip(player_1_cards, player_2_cards):
+
+#     if card_p1 < card_p2:
+#         print(1)
+#         break
+#     elif card_p1 > card_p2:
+#         print(2)
+#         break
+#     else:
+#         equal_round += 1
+
+# else:
+
+#     if len_game_1 < len_game_2:
+#         print(2)
+#     elif len_game_1 > len_game_2:
+#         print(1)
+#     else:
+#         print("=")
+
+# print(equal_round)
+
+"""
+Analyse d’une langue
+
+Au cours des siècles une langue évolue, et non seulement les mots apparaissent ou disparaissent, mais certaines lettres deviennent plus utilisées ou au contraire moins utilisées.
+
+Afin de pouvoir rapidement analyser de nombreux textes, on souhaite mettre au point un programme calculant combien de fois une lettre donnée est présente au sein d’un texte.
+
+Contraintes
+Chaque ligne de texte contient au plus 1000 caractères.
+
+Entrée
+Sur la première ligne, la lettre majuscule dont on doit chercher le nombre d’apparition dans le texte.
+
+Sur la seconde ligne, un entier nbLignes le nombre de lignes du texte.
+
+Sur les nbLignes lignes suivantes, le texte, ne contenant aucune lettre minuscule.
+
+Sortie
+Un seul entier, le nombre d’apparitions de la lettre au sein du texte.
+
+Exemple
+entrée :
+
+E
+2
+JE VOUS REMECTZ A LA GRANDE CHRONICQUE PANTAGRUELINE 
+RECONGNOISTRE LA GENEALOGIE ET ANTIQUITE DONT NOUS EST VENU GARGANTUA
+sortie :
+
+16
+
+"""
+
+letter = input()
+number_of_lines = int(input())
+
+letter_count = 0
+
+for _ in range(number_of_lines):
+    line = input()
+    for character in line:
+        if character == letter:
+            letter_count += 1
+
+print(letter_count)
+
+# Other way to do it:
+
+
+
+letter = input()
+number_of_lines = int(input())
+
+letter_count = sum(character == letter for _ in range(number_of_lines) for character in input())
