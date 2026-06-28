@@ -48,17 +48,17 @@ H.G. WELLS
 
 """
 
-# books_number = 6
-# books = []
+books_number = 6
+books = []
 
-# for book in range(books_number):
-#   author = input()
-#   title = input()
-#   books.append(title)
-#   books.append(author)
+for book in range(books_number):
+  author = input()
+  title = input()
+  books.append(title)
+  books.append(author)
   
-# for book in books:
-#   print(book)
+for book in books:
+  print(book)
 
 
 # Comparer deux chaînes de caractères
@@ -67,15 +67,15 @@ H.G. WELLS
 
 # exemple :
 
-# line1 = "Maitre Renard, par l'odeur alleche"
-# line2 = "Lui tint a peu pres ce langage !"
-# print("Selon l'ordre lexicographique, ", end="")
-# if line1 < line2:
-#     print(f"'{line1}' est avant '{line2}'")
-# elif line1 > line2:
-#     print(f"'{line1}' est après '{line2}'")
-# else:
-#     print(f"'{line1}' est egal a '{line2}'")
+line1 = "Maitre Renard, par l'odeur alleche"
+line2 = "Lui tint a peu pres ce langage !"
+print("Selon l'ordre lexicographique, ", end="")
+if line1 < line2:
+    print(f"'{line1}' est avant '{line2}'")
+elif line1 > line2:
+    print(f"'{line1}' est après '{line2}'")
+else:
+    print(f"'{line1}' est egal a '{line2}'")
 
 
 """
@@ -105,23 +105,23 @@ Si les deux noms sont égaux, il ne faut rien afficher car la personne a voulu t
 
 """
 
-# borrower_1 = input()
-# borrower_2 = input()
+borrower_1 = input()
+borrower_2 = input()
 
-# if borrower_1 < borrower_2:
-#   print(borrower_1)
-# elif borrower_1 > borrower_2:
-#   print(borrower_2)
-# else:
-#   print()
+if borrower_1 < borrower_2:
+  print(borrower_1)
+elif borrower_1 > borrower_2:
+  print(borrower_2)
+else:
+  print()
 
 # other way to do it
 
-# borrower_1 = input()
-# borrower_2 = input()
+borrower_1 = input()
+borrower_2 = input()
 
-# if borrower_1 != borrower_2:
-#   print(min(borrower_1, borrower_2))
+if borrower_1 != borrower_2:
+  print(min(borrower_1, borrower_2))
 
 
 """"
@@ -172,16 +172,16 @@ porte. L'entreprise en sortira grande gagnante.
 
 """
 
-# lines_number = int(input())
-# text_lines = []
+lines_number = int(input())
+text_lines = []
 
-# for id_line in range(lines_number):
-#   line = input()
-#   text_lines.append(line)
+for id_line in range(lines_number):
+  line = input()
+  text_lines.append(line)
 
-# for id_line in range(lines_number):
-#   if id_line % 2 == 0:
-#     print(text_lines[id_line])
+for id_line in range(lines_number):
+  if id_line % 2 == 0:
+    print(text_lines[id_line])
 
 
 """"
@@ -223,16 +223,16 @@ En attendant Godot
 
 """
 
-# books_number = int(input())
-# minimal_length = int(input())
+books_number = int(input())
+minimal_length = int(input())
 
 
-# for book in range(books_number):
-#   title = input()
-#   report = input()
+for book in range(books_number):
+  title = input()
+  report = input()
   
-#   if len(report) < minimal_length:
-#     print(title)
+  if len(report) < minimal_length:
+    print(title)
 
 
 """
@@ -275,30 +275,30 @@ Les Fourberies de Scapin
 
 """
 
-# books_number = int(input())
-# titles_list = []
+books_number = int(input())
+titles_list = []
 
-# for book in range(books_number):
-#   title = input()
-#   titles_list.append(title)
+for book in range(books_number):
+  title = input()
+  titles_list.append(title)
 
-# max_length_title = 0
+max_length_title = 0
 
-# for title in titles_list:
-#   if len(title) > max_length_title:
-#     print(title)
-#     max_length_title = len(title)
+for title in titles_list:
+  if len(title) > max_length_title:
+    print(title)
+    max_length_title = len(title)
 
 # Other way to do it without storing the titles in a list
 
-# book_number = int(input())
-# max_length_title = 0
+book_number = int(input())
+max_length_title = 0
 
-# for book in range(book_number):
-#   title = input()
-#   if len(title) > max_length_title:
-#     print(title)
-#     max_length_title = len(title)
+for book in range(book_number):
+  title = input()
+  if len(title) > max_length_title:
+    print(title)
+    max_length_title = len(title)
 
 
 
@@ -334,12 +334,12 @@ for element in elements:
 
 # On peut faire :
 
-# mots = input().split(" ")
-# nombre = int(mots[0])
-# mot = mots[1]
+mots = input().split(" ")
+nombre = int(mots[0])
+mot = mots[1]
 
-# for i in range(nombre):
-#   print(mot)
+for i in range(nombre):
+    print(mot)
 
 # On a donc utilisé la méthode split() pour découper la chaîne de caractères en deux parties, puis on a converti la première partie en entier avec int().
 
@@ -384,11 +384,11 @@ Shannon Claude
 
 """
 
-# people_nb = int(input())
+people_nb = int(input())
 
-# for people in range(people_nb):
-#   first_name, last_name = input().split(" ")
-#   print(last_name, first_name)
+for people in range(people_nb):
+  first_name, last_name = input().split(" ")
+  print(last_name, first_name)
 
 
 # Lire plusieurs chiffres entiers:
@@ -397,17 +397,17 @@ Shannon Claude
 
 # Exemple :
 
-# mots = input().split(" ")
-# longeur = int(mots[0])
-# largeur = int(mots[1])
-# area = longeur * largeur
-# print(area)
+mots = input().split(" ")
+longeur = int(mots[0])
+largeur = int(mots[1])
+area = longeur * largeur
+print(area)
 
 # On peut aussi utiliser la fonction map() pour appliquer la fonction int() à chaque élément de la liste obtenue avec split().
 
-# longeur, largeur = map(int, input().split(" "))
-# area = longeur * largeur
-# print(area)
+longeur, largeur = map(int, input().split(" "))
+area = longeur * largeur
+print(area)
 
 """
 Analyse de fréquence
@@ -447,57 +447,57 @@ sortie :
 """
 
 
-# lines_number, words_number = map(int, input().split(" "))
+lines_number, words_number = map(int, input().split(" "))
 
-# words_length = {}
+words_length = {}
 
-# for line in range(lines_number):
+for line in range(lines_number):
 
-#   words = input().split(" ")
+  words = input().split(" ")
 
-#   for word in words:
+  for word in words:
 
-#     len_w = len(word)
+    len_w = len(word)
 
-#     if len_w in words_length:
+    if len_w in words_length:
 
-#       words_length[len_w] += 1
+      words_length[len_w] += 1
     
-#     else:
+    else:
 
-#       words_length[len_w] = 1
+      words_length[len_w] = 1
 
-# print(words_length)
+print(words_length)
 
-# for length in sorted(words_length):
-#   print(f"{length} : {words_length[length]}")
+for length in sorted(words_length):
+  print(f"{length} : {words_length[length]}")
 
 
 # Other way to do it:
 
-# lines_number, words_number = map(int, input().split(" "))
+lines_number, words_number = map(int, input().split(" "))
 
-# max_word_length = 100
+max_word_length = 100
 
-# words_length = [0] * (max_word_length + 1)
+words_length = [0] * (max_word_length + 1)
 
-# for line in range(lines_number):
+for line in range(lines_number):
 
-#   words = input().split(" ")
+  words = input().split(" ")
 
-#   for word in words:
+  for word in words:
 
-#     len_w = len(word)
+    len_w = len(word)
 
-#     words_length[len_w] += 1
-
-
-# for length, count in enumerate(words_length):
-#   if count > 0:
-#     print(f"{length} : {count}")
+    words_length[len_w] += 1
 
 
-# print(words_length)
+for length, count in enumerate(words_length):
+  if count > 0:
+    print(f"{length} : {count}")
+
+
+print(words_length)
 
 
 
@@ -513,19 +513,19 @@ Afin d’éviter de passer leurs journées avec la tête tournée à 90 degrés 
 
 """
 
-# title = input().split(" ")
+title = input().split(" ")
 
-# for word in title:
-#   for letter in word:
-#     print(letter)
-#   print()
+for word in title:
+  for letter in word:
+    print(letter)
+  print()
 
 # Other way to do it:
 
-# title = input()
+title = input()
 
-# for letter in title:
-#   print(letter)
+for letter in title:
+  print(letter)
 
 """
 Écriture en miroir
@@ -564,30 +564,30 @@ Le Lievre et la Tortue en sont un temoignage
 
 """
 
-# lines_number = int(input())
+lines_number = int(input())
 
-# for line_id in range(lines_number):
-#   string = input()
+for line_id in range(lines_number):
+  string = input()
 
-#   reversed_string = ""
-#   index = len(string)
+  reversed_string = ""
+  index = len(string)
 
-#   while index:
-#     index -= 1
-#     reversed_string += string[index]
+  while index:
+    index -= 1
+    reversed_string += string[index]
 
-#   print(reversed_string)
+  print(reversed_string)
 
 # Other way to do it:
 
-# lines_number = int(input())
+lines_number = int(input())
 
-# for line_id in range(lines_number):
-#   string = input()
-#   length = len(string)
-#   for character_id in range(length):
-#     print(string[length - 1 - character_id], end = "")
-#   print()
+for line_id in range(lines_number):
+  string = input()
+  length = len(string)
+  for character_id in range(length):
+    print(string[length - 1 - character_id], end = "")
+  print()
 
   # Comparer deux caractères
 
@@ -654,15 +654,15 @@ sortie :
 
 """
 
-# name = input()
-# first_letter = name[0]
+name = input()
+first_letter = name[0]
 
-# if first_letter <= "F":
-#     print(1)
-# elif first_letter <= "P":
-#     print(2)
-# else:
-#     print(3)
+if first_letter <= "F":
+    print(1)
+elif first_letter <= "P":
+    print(2)
+else:
+    print(3)
 
 """
 ngms sns vlls
@@ -698,32 +698,32 @@ MRGRTMTCHLL
 
 """
 
-# title = input()
-# author = input()
+title = input()
+author = input()
 
-# vowels = "AEIOUY"
+vowels = "AEIOUY"
 
-# for character in title:
-#     if character not in vowels and character != " ":
-#       print(character, end= "")
+for character in title:
+    if character not in vowels and character != " ":
+      print(character, end= "")
 
-# print()
+print()
 
-# for character in author:
-#     if character not in vowels and character != " ":
-#       print(character, end= "")
+for character in author:
+    if character not in vowels and character != " ":
+      print(character, end= "")
 
 
-# title = input()
-# author = input()
+title = input()
+author = input()
 
-# vowels_and_space = "AEIOUY "
+vowels_and_space = "AEIOUY "
 
-# title_to_guess = "".join(c for c in title if c not in vowels_and_space)
-# author_to_guess = "".join(c for c in author if c not in vowels_and_space)
+title_to_guess = "".join(c for c in title if c not in vowels_and_space)
+author_to_guess = "".join(c for c in author if c not in vowels_and_space)
 
-# print(title_to_guess)
-# print(author_to_guess)
+print(title_to_guess)
+print(author_to_guess)
 
 
 """
@@ -785,90 +785,90 @@ Dans l'exemple 2, après deux égalités, le joueur 1 n'a plus de carte et donc 
 
 """
 
-# player_1_cards = input()
-# player_2_cards = input()
+player_1_cards = input()
+player_2_cards = input()
 
-# len_game_1 = len(player_1_cards)
-# len_game_2 = len(player_2_cards)
+len_game_1 = len(player_1_cards)
+len_game_2 = len(player_2_cards)
 
-# equality_count = 0
+equality_count = 0
 
-# for i in range(min(len_game_1, len_game_2)):
+for i in range(min(len_game_1, len_game_2)):
 
-#     card_p1 = player_1_cards[i]
-#     card_p2 = player_2_cards[i]
+    card_p1 = player_1_cards[i]
+    card_p2 = player_2_cards[i]
 
-#     if card_p1 < card_p2:
-#         print(1)
-#         break
-#     elif card_p1 > card_p2:
-#         print(2)
-#         break
-#     else:
-#         equality_count += 1
-#         continue
+    if card_p1 < card_p2:
+        print(1)
+        break
+    elif card_p1 > card_p2:
+        print(2)
+        break
+    else:
+        equality_count += 1
+        continue
         
-# else:
-#     if len_game_1 < len_game_2:
-#         print(2)
-#     elif len_game_1 > len_game_2:
-#         print(1)
-#     else:
-#         print("=")
+else:
+    if len_game_1 < len_game_2:
+        print(2)
+    elif len_game_1 > len_game_2:
+        print(1)
+    else:
+        print("=")
 
 
-# print(equality_count) 
+print(equality_count) 
 
 # other way to do it: 
 
-# player_1_cards = input()
-# player_2_cards = input()
-# round = 0
+player_1_cards = input()
+player_2_cards = input()
+round = 0
 
-# len_game_1 = len(player_1_cards)
-# len_game_2 = len(player_2_cards)
+len_game_1 = len(player_1_cards)
+len_game_2 = len(player_2_cards)
 
-# while round < len_game_1 and round < len_game_2 and player_1_cards[round] == player_2_cards[round]:
-#     round = round + 1
-# if round == len_game_1 and round == len_game_2:
-#     print("=")
-# elif round == len_game_2 or (round < len_game_1 and player_1_cards[round] < player_2_cards[round]):
-#     print(1)
-# else:
-#     print(2)
-# print(round)
+while round < len_game_1 and round < len_game_2 and player_1_cards[round] == player_2_cards[round]:
+    round = round + 1
+if round == len_game_1 and round == len_game_2:
+    print("=")
+elif round == len_game_2 or (round < len_game_1 and player_1_cards[round] < player_2_cards[round]):
+    print(1)
+else:
+    print(2)
+print(round)
 
 # Other way to do it:
 
-# player_1_cards = input()
-# player_2_cards = input()
+player_1_cards = input()
+player_2_cards = input()
 
-# len_game_1 = len(player_1_cards)
-# len_game_2 = len(player_2_cards)
+len_game_1 = len(player_1_cards)
+len_game_2 = len(player_2_cards)
 
-# equal_round = 0
+equal_round = 0
 
-# for card_p1, card_p2 in zip(player_1_cards, player_2_cards):
+for card_p1, card_p2 in zip(player_1_cards, player_2_cards):
 
-#     if card_p1 < card_p2:
-#         print(1)
-#         break
-#     elif card_p1 > card_p2:
-#         print(2)
-#         break
-#     else:
-#         equal_round += 1
+    if card_p1 < card_p2:
+        print(1)
+        break
+    elif card_p1 > card_p2:
+        print(2)
+        break
+    else:
+        equal_round += 1
 
-# else:
+else:
 
-#     if len_game_1 < len_game_2:
-#         print(2)
-#     elif len_game_1 > len_game_2:
-#         print(1)
-#     else:
-#         print("=")
+    if len_game_1 < len_game_2:
+        print(2)
+    elif len_game_1 > len_game_2:
+        print(1)
+    else:
+        print("=")
 
-# print(equal_round)
+print(equal_round)
 
 """
 Analyse d’une langue
@@ -918,9 +918,78 @@ print(letter_count)
 
 # Other way to do it:
 
-
-
 letter = input()
 number_of_lines = int(input())
 
-letter_count = sum(character == letter for _ in range(number_of_lines) for character in input())
+letter_count = sum(ch == letter for _ in range(number_of_lines) for ch in input())
+
+print(letter_count)
+
+
+
+# Modifier une chaîne de caractères existante
+
+# Pour modifier une chaîne de caractères existante, on peut utiliser la méthode replace() qui permet de remplacer toutes les occurrences d’une sous-chaîne par une autre.
+
+# Exemple :
+
+phrase = "Le renard brun rapide saute par-dessus le chien paresseux"
+phrase_modifiee = phrase.replace("brun", "gris")
+print(phrase_modifiee)
+
+# Une autre méthode consiste à passer par un autre objet intermédiaire, par exemple une liste de caractères, puis à reconstruire la chaîne de caractères à partir de cette liste.
+
+
+# Exemple :
+
+texte = "Exemple de texte"
+
+caracter_list = list(texte)
+
+caracter_list[8] = "X"
+caracter_list[9] = "X"
+
+texte_modifie = "".join(caracter_list)
+print(texte_modifie)
+
+"""
+
+Sans espaces
+
+Ecrivez un programme qui lit une ligne tapée au clavier et l'affiche en remplaçant tous les espaces par le caractère "_".
+
+Contraintes
+La ligne de texte contient au plus 100 caractères.
+
+Exemple
+entrée :
+
+Voici un exemple de texte avec des espaces.
+sortie :
+
+Voici_un_exemple_de_texte_avec_des_espaces.
+
+
+"""
+
+text = input()
+
+space = " "
+
+underscore = "_"
+
+text_without_spaces = text.replace(space, underscore)
+
+print(text_without_spaces)
+
+# Other way to do it:
+
+text = input()
+
+for i in range(len(text)):
+    character = text[i]
+    if character == " ":
+        print("_", end= "")
+    else:
+        print(character, end= "")
+
