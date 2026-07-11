@@ -39,6 +39,8 @@ ou quand progression atteint 100 et affiche "BRAVO TU AS APPRIS !!!".
 """
 import random
 
+# Definition de la classe DataAnalyst avec les attributs et méthodes spécifiés dans le challenge
+
 class DataAnalyst:
   def __init__(self, lastname, firstname, age, sexe, previous_training):
     self.lastname = lastname
@@ -48,6 +50,8 @@ class DataAnalyst:
     self.previous_training = previous_training
     self.motivation = 100
     self.progressing = 0
+
+  # Methodes pour simuler les actions du data analyst et modifier les attributs motivation et progression
 
   def do_training(self):
 
@@ -87,7 +91,9 @@ class DataAnalyst:
 
     return self.motivation, self.progressing
 
-    
+
+# Instanciation d'un objet DataAnalyst avec les attributs spécifiés
+
 tom = DataAnalyst("Dubois", "Tom", 28, "masculin", "Devops")
 
 print(tom.lastname, tom.firstname, tom.age, tom.sexe, tom.previous_training, tom.motivation, tom.progressing)
@@ -96,6 +102,9 @@ print(f"{tom.firstname} {tom.lastname} a {tom.age} ans, il est de sexe {tom.sexe
       f"Il a suivi la formation {tom.previous_training}.\n" 
       f"Sa motivation est de {tom.motivation} et sa progression est de {tom.progressing}.")
 
+# Construction d'une liste de méthodes pour simuler les actions du data analyst 
+# et lancer aléatoirement ces méthodes 
+
 methods = [
 tom.do_training,
 tom.work_harder,
@@ -103,18 +112,27 @@ tom.failed,
 tom.succeed
 ]
 
+tour = 1
 
 while tom.motivation > 0 and tom.progressing < 100:
   action = random.choice(methods)
   action()
-
   print(
-    f"Motivation : {tom.motivation} "
-    f"Progression : {tom.progressing}"
+    f"\n"
+    f"Tour {tour} \n"
+    f"La méthode {action.__name__}() a été utilisée.\n"
+    f"motivation vaut maintenant {tom.motivation} \n" 
+    f"progression vaut maintenant {tom.progressing}"
+
   )
+  tour += 1
 
 if tom.motivation <= 0:
   print("BRAVO TU AS GAGNÉ !!!")
 else:
   print("BRAVO TU AS APPRIS !!!")
+
+print()
+
+
 
