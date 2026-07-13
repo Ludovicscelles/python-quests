@@ -112,3 +112,43 @@ class MyCar(Car):
 # En effet, Python applique un mécanisme appelé name mangling, 
 # qui renomme automatiquement ces membres afin d'éviter les accès accidentels 
 # et les conflits de noms dans les sous-classes.
+
+# L'encapsulation
+
+# L'encapsulation est un concept de la programmation orientée objet qui consiste à regrouper les données (attributs) et les comportements (méthodes) 
+# dans une même classe, tout en contrôlant l'accès à ces données afin de préserver la cohérence de l'objet.
+
+# Le name mangling, les attributs avec _ ou __, ainsi que le propriété (property) sont des mécanismes de conventions
+# qui permettent de mieux mettre en œuvre ce principe de Python.
+
+# Exemple de code :
+
+class SuperCar:
+    def __init__(self, speed, color):
+        self.__speed = speed
+        self.__color = color
+    
+    def set_speed(self, value):
+        self.__speed = value
+
+    def get_speed(self):
+        return self.__speed
+    
+    def set_color(self, value):
+        self.__color = value
+
+    def get_color(self):
+        return self.__color
+
+ford = SuperCar(200, "red")
+honda = SuperCar(250, "blue")
+audi = SuperCar(300, "black")
+
+print(ford.get_speed())
+
+ford.set_speed(300)
+
+ford.__speed = 400
+
+print(ford.get_speed())
+print(ford.get_color())
