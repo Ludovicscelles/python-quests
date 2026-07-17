@@ -123,6 +123,14 @@ for i in range(5):
     print(i)  # Affiche les nombres de 0 à 4
 print()
 
+# len() : Retourne le nombre d'éléments dans un objet (chaîne, liste, dictionnaire, etc.).
+ma_chaine = "Bonjour"
+print(len(ma_chaine))  # Affiche 7
+ma_liste = [1, 2, 3, 4, 5]
+print(len(ma_liste))  # Affiche 5
+mon_dictionnaire = {"nom": "Alice", "âge": 30, "ville": "Paris"}
+print(len(mon_dictionnaire))  # Affiche 3
+
 # Unicode
 
 caractere = 'A'
