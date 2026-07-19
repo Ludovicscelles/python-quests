@@ -117,3 +117,10 @@ if 0 <= position < len(my_tuple_series):
     new_tuple_series = my_tuple_series[:position] + (input("Enter a new series name: "),) + my_tuple_series[position:]
     print(new_tuple_series)
 else:    print("Invalid position. Please enter a number between 0 and 9.")
+
+
+texte = "Matrix (31/03/1999) - 130 minutes. IMDB note 9/10 (https://www.imdb.com/title/tt0133093). Thomas A. Anderson (Keanu Reeves), un jeune informaticien connu dans le monde du hacking sous le pseudonyme de Neo, est contacté via son ordinateur par ce qu’il pense être un groupe de hackers. Ils lui font découvrir que le monde dans lequel il vit n’est qu’un monde virtuel, la matrice, dans lequel les êtres humains sont gardés sous contrôle. Morpheus (Laurence Fishburne), le capitaine du Nebuchadnezzar, contacte Neo et pense que celui-ci est l’Élu qui peut libérer les êtres humains du joug des machines et prendre le contrôle de la matrice"
+
+# Trouve l'expression régulière qui correspond à l'url de la fiche du film sur IMDB https://www.imdb.com/title/tt0133093 
+# (attention à ne pas sélectionner les parenthèses)
+

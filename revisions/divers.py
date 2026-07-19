@@ -67,3 +67,44 @@ motivation, progression = do_training(motivation, progression)
 
 print(f"Motivation: {motivation}, Progression: {progression}")
 
+# Class
+
+# La classe mère statisticien aura 3 attributs : Chacun d'entre eux peut avoir des valeurs entières (integer) allant de 0 à 100 :
+
+# logique
+# memoire
+# creativite
+# initialisation() : une méthode qui attribue aléatoirement une valeur aux 3 attributs en faisant en sorte que la somme totale soit comprise entre 111 et 177, 
+# les valeurs paires et multiples de 5 exclues. Cette méthode sera lancée par le constructeur de l'objet.
+
+class Statisticien:
+  def __init__(self):
+    self.initialization()
+
+  def initialization(self):
+
+    autorized_values = [
+      number
+      for number in range(0, 100)
+      if number % 2 != 0 and number % 5 != 0
+    ]
+
+    while True:
+      self.logic = random.choice(autorized_values)
+      self.memory = random.choice(autorized_values)
+      self.creativity = random.choice(autorized_values)
+
+      sum_attributes = sum([self.logic, self.memory, self.creativity])
+
+      if 111 <= sum_attributes <= 177:
+        break
+    
+    print("La somme des attributs est de : ", sum_attributes)
+
+statisticien1 = Statisticien()
+statisticien1.initialization()
+
+      
+
+    
+

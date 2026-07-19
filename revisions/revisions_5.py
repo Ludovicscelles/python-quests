@@ -134,25 +134,30 @@ methods = [
   tom.succeed,
 ]
 
-tour = 1
 
+def launch_program():
 
-while tom.motivation > 0 and tom.progress < 100:
+  tour = 1
 
-  action = random.choice(methods)
-  action()
+  while tom.motivation > 0 and tom.progress < 100:
 
-  print(
-    f"Tour {tour}\n"
-    f"La méthode {action.__name__} a été utilisée.\n"
-    f"motivation vaut maintenant {tom.motivation}\n"
-    f"progression vaut maintenant {tom.progress}\n"
-  )
+    action = random.choice(methods)
+    action()
+
+    print(
+      f"Tour {tour}\n"
+      f"La méthode {action.__name__} a été utilisée.\n"
+      f"motivation vaut maintenant {tom.motivation}\n"
+      f"progression vaut maintenant {tom.progress}\n"
+    )
   
-  tour += 1
+    tour += 1
 
 
-if tom.motivation <= 0:
-  print("BRAVO TU AS GAGNÉ !!!")
-else:
-  print("BRAVO TU AS APPRIS !!!")
+  if tom.motivation <= 0:
+    print("BRAVO TU AS GAGNÉ !!!")
+  else:
+    print("BRAVO TU AS APPRIS !!!")
+
+
+launch_program()
