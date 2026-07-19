@@ -190,3 +190,5 @@ print(f"Catégorie la plus fréquente: {find_mode(categories)}")
 
 
 
+
+
