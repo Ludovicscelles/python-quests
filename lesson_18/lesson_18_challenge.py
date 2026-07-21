@@ -86,3 +86,45 @@ valeurs = [80, 90, 85, 95]
 poids = [0.2, 0.3, 0.3, 0.2]
 
 print(calculer_moyenne_ponderee(valeurs, poids))
+
+# Créez une fonction analyser_texte(texte) qui prend une chaîne de caractères en entrée et retourne un dictionnaire contenant les informations suivantes :
+
+# Nombre total de mots
+# Nombre de caractères (espaces inclus)
+# Nombre de caractères (espaces exclus)
+# Mot le plus long
+# Longueur moyenne des mots
+# Testez cette fonction avec le texte suivant : 
+# "Python est un langage de programmation puissant et facile à apprendre. 
+# Il dispose de structures de données de haut niveau efficaces et d'une approche simple mais efficace de la programmation orientée objet."
+
+
+def analyser_texte(texte):
+
+  mots = texte.split()
+
+  if not mots:
+    raise ValueError("La chaîne de caractères est vide.")
+
+  total_mots = len(mots)
+  total_caracteres = len(texte)
+  total_ch_sans_espaces = len(texte.replace(" ", ""))
+  mot_le_plus_long = mots[0]
+  
+  for mot in mots:
+    if len(mot) >= len(mot_le_plus_long):
+      mot_le_plus_long = mot
+
+  longueur_moyenne_mots = round((total_ch_sans_espaces / total_mots), 2)
+
+  return {
+          "Nombre total de mots": total_mots, 
+          "Nombre de caractères (espaces inclus)": total_caracteres,
+          "Nombre de caractères (espaces exclus)": total_ch_sans_espaces,
+          "Mot le plus long": mot_le_plus_long,
+          "Longueur moyenne des mots": longueur_moyenne_mots
+          }
+
+texte = "Python est un langage de programmation puissant et facile à apprendre. Il dispose de structures de données de haut niveau efficaces et d'une approche simple mais efficace de la programmation orientée objet."
+
+print(analyser_texte(texte))
